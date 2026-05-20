@@ -1,0 +1,1985 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>SSS NCD | Complete Networking Learning Hub</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/learn.png" />
+  </head>
+  <body>
+    <div class="presentation-wrapper">
+      <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">30</span>
+      </div>
+
+      <div class="slides-container" id="slides-container">
+        <!-- SLIDE 1 - TITLE SLIDE -->
+        <div class="slide active-slide" data-slide="1">
+          <div class="slide-content title-slide">
+            <div class="sss-logo-icon">
+              <img
+                src="assets/ncdnoss.gif"
+                alt="ncd_logo"
+                style="border-radius: 50%"
+                width="400px"
+              />
+            </div>
+            <h1>Network & Communications Department</h1>
+            <div class="title-divider"></div>
+            <h2>Social Security System · East Avenue · Quezon City</h2>
+            <p class="subtitle">
+              Complete Learning Module · Infrastructure · Operations · Best
+              Practices
+            </p>
+          </div>
+        </div>
+
+        <!-- SLIDE 1.5 - WELCOME INTERN MESSAGE (插入在标题页之后) -->
+        <div class="slide" data-slide="1-5">
+          <div class="slide-header">
+            <i class="fas fa-hands-helping"></i>
+            <h2>Welcome, New Intern! 👋</h2>
+          </div>
+          <div class="slide-content" style="padding: 20px 30px">
+            <div
+              class="info-card"
+              style="
+                background: linear-gradient(135deg, #e8f0fe 0%, #ffffff 100%);
+                border-left: 6px solid #e63946;
+                margin-bottom: 25px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 20px;
+                  flex-wrap: wrap;
+                "
+              >
+                <i
+                  class="fas fa-smile-wink"
+                  style="font-size: 4rem; color: #e63946"
+                ></i>
+                <div style="flex: 1">
+                  <h3
+                    style="
+                      color: #0a2b3e;
+                      margin-bottom: 12px;
+                      font-size: 1.8rem;
+                    "
+                  >
+                    You're now part of the NCD family!
+                  </h3>
+                  <p style="font-size: 1.1rem; line-height: 1.5">
+                    We're excited to have you aboard. The Network &
+                    Communications Department is where real-world networking
+                    happens — from crimping RJ45 to managing nationwide
+                    connectivity.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="two-column" style="margin-top: 20px; gap: 30px">
+              <div class="info-card">
+                <i
+                  class="fas fa-graduation-cap"
+                  style="
+                    font-size: 2rem;
+                    color: #e63946;
+                    margin-bottom: 15px;
+                    display: inline-block;
+                  "
+                ></i>
+                <h3 style="margin-bottom: 12px">What You'll Learn</h3>
+                <ul
+                  style="
+                    padding-left: 20px;
+                    line-height: 1.6;
+                    list-style-type: none;
+                  "
+                >
+                  <li>✓ Real LAN/WAN troubleshooting</li>
+                  <li>✓ IP Phone & VLAN overview configuration</li>
+                  <li>✓ Crimping, cabling & testing tools</li>
+                  <li>✓ Ticket handling & escalation workflow</li>
+                  <li>✓ Collaboration with NOSS, NMS & CMS teams</li>
+                </ul>
+              </div>
+
+              <div class="info-card">
+                <i
+                  class="fas fa-heart"
+                  style="
+                    font-size: 2rem;
+                    color: #e63946;
+                    margin-bottom: 15px;
+                    display: inline-block;
+                  "
+                ></i>
+                <h3 style="margin-bottom: 12px">Intern Mindset</h3>
+                <ul
+                  style="
+                    padding-left: 20px;
+                    line-height: 1.6;
+                    list-style-type: none;
+                  "
+                >
+                  <li>✓ Ask questions — curiosity is gold</li>
+                  <li>✓ Document every fix you discover</li>
+                  <li>✓ Safety first: never compromise security</li>
+                  <li>✓ Respect the 5S organization rule</li>
+                  <li>✓ Have fun while building solutions!</li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="tip"
+              style="
+                margin-top: 25px;
+                background: #fef9e3;
+                border-left-color: #f4b836;
+              "
+            >
+              <center>
+                <i class="fas fa-quote-left"></i> It's fine to celebrate
+                <u>SUCCESS</u> but it is more important to heed the lessons of
+                <u>FAILURE</u>.
+                <i class="fas fa-quote-right"></i>
+                --
+                <strong>Bill Gates</strong>
+              </center>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px">
+              <span class="stat-pill" style="background: #1e6f5c"
+                ><i class="fas fa-users"></i> Team NCD</span
+              >
+              <span class="stat-pill" style="background: #2c3e66"
+                ><i class="fas fa-network-wired"></i> 234+ locations</span
+              >
+              <span class="stat-pill" style="background: #b23c1c"
+                ><i class="fas fa-ticket-alt"></i> Real impact daily</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 - MISSION & VISION -->
+        <div class="slide" data-slide="2">
+          <div class="slide-header">
+            <i class="fas fa-bullseye"></i>
+            <h2>SSS Mission, Vision & Core Values (Review)</h2>
+          </div>
+          <div class="slide-content two-column" style="gap: 0%">
+            <center>
+              <img
+                src="assets/sssforall.png"
+                alt="sss_logo"
+                style="width: 400px; align-items: end"
+              />
+            </center>
+            <div class="info-card">
+              <br />
+              <br />
+              <i class="fas fa-flag-checkered"></i>
+              <h3>Mission</h3>
+              <p>
+                To manage a sound and viable social security system which shall
+                promote social justice and provide meaningful protection to
+                members and their families against hazards of disability,
+                sickness, maternity, old age, death, and other contingencies
+                resulting in loss of income or financial burden.
+              </p>
+              <br /><br /><br />
+              <i class="fas fa-eye"></i>
+              <h3>Vision</h3>
+              <p>
+                A viable social security institution providing universal and
+                equitable social protection through world-class service.
+              </p>
+              <br />
+              <br />
+              <div
+                class="values-container"
+                style="
+                  display: flex;
+                  gap: 10px;
+                  justify-content: center;
+                  margin-top: 15px;
+                "
+              >
+                <span class="stat-pill">Trust</span>
+                <span class="stat-pill">Empowerment</span>
+                <span class="stat-pill">Teamwork</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 - HISTORY & MANDATE -->
+        <div class="slide" data-slide="3">
+          <div class="slide-header">
+            <i class="fas fa-history"></i>
+            <h2>History & Mandate (Review)</h2>
+          </div>
+          <div class="slide-content">
+            <div class="timeline-item">
+              <div class="year">1957</div>
+              <div>
+                Founded September 1, 1957 under Republic Act No. 1161 (Social
+                Security Act of 1954)
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">1997</div>
+              <div>
+                RA 8282 (Social Security Act of 1997) - expanded coverage and
+                benefits
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2019</div>
+              <div>
+                RA 11199 (Social Security Act of 2018) - unemployment benefits,
+                OFW coverage, Provident Fund, penalty condonation
+              </div>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-pill">
+                <i class="fas fa-building"></i> 123 Branches
+              </div>
+              <div class="stat-pill">
+                <i class="fas fa-store"></i> 84 Satellites
+              </div>
+              <div class="stat-pill">
+                <i class="fas fa-globe"></i> 27 Int'l Offices
+              </div>
+              <div class="stat-pill">
+                <i class="fas fa-chart-line"></i> 234+ Locations
+              </div>
+            </div>
+            <img
+              src="assets/sss_building.png"
+              alt="sss_history"
+              style="height: 350px; border-radius: 10px"
+            />
+          </div>
+        </div>
+
+        <!-- SLIDE 4 - NCD DEPARTMENT OVERVIEW -->
+        <div class="slide" data-slide="4">
+          <div class="slide-header">
+            <i class="fas fa-sitemap"></i>
+            <h2>Network & Communications Department</h2>
+          </div>
+          <div class="slide-content">
+            <p style="font-size: 1.1rem; margin-bottom: 20px">
+              Key technical unit under the Information Technology Management
+              Group — backbone of SSS nationwide connectivity
+            </p>
+            <div class="functions-grid">
+              <div class="func-item" onclick="toggleDescription(this)">
+                <i class="fas fa-shield-alt"></i>
+                <strong>Network Security Management</strong>
+                <div class="func-desc hidden">
+                  Implements firewalls, intrusion detection systems, and
+                  encryption protocols to safeguard SSS data and prevent
+                  unauthorized access.
+                </div>
+              </div>
+              <div class="func-item" onclick="toggleDescription(this)">
+                <i class="fas fa-server"></i>
+                <strong>Server and Data Center Administration</strong>
+                <div class="func-desc hidden">
+                  Oversees physical and virtual servers, ensuring optimal
+                  performance, redundancy, and disaster recovery readiness.
+                </div>
+              </div>
+              <div class="func-item" onclick="toggleDescription(this)">
+                <i class="fas fa-phone-alt"></i>
+                <strong>Voice and Unified Communications</strong>
+                <div class="func-desc hidden">
+                  Manages IP telephony, video conferencing, and internal
+                  communication systems for efficient inter-office
+                  collaboration.
+                </div>
+              </div>
+              <div class="func-item" onclick="toggleDescription(this)">
+                <i class="fas fa-chart-line"></i>
+                <strong>Performance Monitoring and Optimization</strong>
+                <div class="func-desc hidden">
+                  Continuously tracks network health, bandwidth usage, and
+                  latency to maintain high service availability.
+                </div>
+              </div>
+              <div class="func-item" onclick="toggleDescription(this)">
+                <i class="fas fa-bug"></i>
+                <strong>Incident Response and Troubleshooting</strong>
+                <div class="func-desc hidden">
+                  Provides rapid technical support for network outages, hardware
+                  failures, and connectivity issues.
+                </div>
+              </div>
+              <div class="func-item" onclick="toggleDescription(this)">
+                <i class="fas fa-sliders-h"></i>
+                <strong>Configuration and Change Management</strong>
+                <div class="func-desc hidden">
+                  Maintains documentation and version control for network
+                  configurations, ensuring compliance and traceability.
+                </div>
+              </div>
+              <div class="func-item" onclick="toggleDescription(this)">
+                <i class="fas fa-chart-line"></i>
+                <strong>Capacity Planning and Scalability</strong>
+                <div class="func-desc hidden">
+                  Forecasts future network demands and plans upgrades to support
+                  expanding SSS operations.
+                </div>
+              </div>
+              <div class="func-item" onclick="toggleDescription(this)">
+                <i class="fas fa-book"></i>
+                <strong
+                  >Technical Documentation and Knowledge Management</strong
+                >
+                <div class="func-desc hidden">
+                  Produces manuals, process guides, and system documentation for
+                  internal reference and training.
+                </div>
+              </div>
+              <div class="func-item" onclick="toggleDescription(this)">
+                <i class="fas fa-chart-bar"></i>
+                <strong>Vendor and Carrier Coordination</strong>
+                <div class="func-desc hidden">
+                  Collaborates with telecom providers and hardware vendors for
+                  maintenance, service-level agreements, and procurement.
+                </div>
+              </div>
+              <div class="func-item" onclick="toggleDescription(this)">
+                <i class="fas fa-clipboard-list"></i>
+                <strong>Compliance and Audit Support</strong>
+                <div class="func-desc hidden">
+                  Ensures adherence to government ICT standards, data privacy
+                  laws, and internal audit requirements.
+                </div>
+              </div>
+            </div>
+            <div class="click-hint">
+              <i class="fas fa-mouse-pointer"></i> Click any function card to
+              view detailed description
+            </div>
+            <div class="info-card" style="font-weight: 600; margin-top: 0px">
+              <img
+                src="assets/ncd_head.png"
+                alt="ncd"
+                style="width: 250px; height: 190px"
+              />
+              <br />
+              <br />
+              BOSS ROMAN ESPISO — Department Manager III / Acting Head
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 5 - ORGANIZATIONAL STRUCTURE -->
+        <div class="slide" data-slide="5">
+          <div class="slide-header">
+            <i class="fas fa-users"></i>
+            <h2>Organizational Structure</h2>
+          </div>
+          <div class="slide-content org-tree">
+            <div class="org-root">
+              <img
+                src="assets/boss.jfif"
+                alt="boss_roman"
+                width="200px"
+                style="border-radius: 50%"
+              /><br />
+              Roman Espiso<br /><span
+                >Department Manager III / Acting Head</span
+              >
+            </div>
+            <div class="org-branches">
+              <div class="org-branch">
+                <div class="org-node">
+                  <img
+                    src="assets/sir_buddy.png"
+                    alt="sir_buddy"
+                    width="200px"
+                    style="border-radius: 50%"
+                  /><br />
+                  NOSS<br /><span>Salvador Condat</span>
+                </div>
+                <div>Network Operations & Support</div>
+                <div style="font-size: 0.8rem">
+                  Network Hardware Installation/Troubleshooting
+                </div>
+              </div>
+              <div class="org-branch">
+                <div class="org-node">
+                  <img
+                    src="assets/maam_ems.jfif"
+                    alt="maam_ems"
+                    width="200px"
+                    style="border-radius: 50%"
+                  /><br />NMS<br /><span>Emylou Cesar</span>
+                </div>
+                <div>Network Management</div>
+                <div style="font-size: 0.8rem">
+                  VLAN · IP Addressing · Switch Configuration
+                </div>
+              </div>
+              <div class="org-branch">
+                <div class="org-node">
+                  <img
+                    src="assets/sir_jet.png"
+                    alt="sir_jet"
+                    width="200px"
+                    style="border-radius: 50%"
+                  /><br />
+                  CMS<br /><span>Jestoni Soriano</span>
+                </div>
+                <div>Carrier Management</div>
+                <div style="font-size: 0.8rem">
+                  ISP Coordination · Direct Lines · Billing Management
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 6 - DAILY OPERATIONS -->
+        <div class="slide" data-slide="6">
+          <div class="slide-header">
+            <i class="fas fa-tasks"></i>
+            <h2>Daily Operations · What to Expect</h2>
+          </div>
+          <div class="slide-content">
+            <div class="ops-icons">
+              <div><i class="fas fa-network-wired"></i> LAN / WAN</div>
+              <div><i class="fas fa-phone-alt"></i> IP Phone</div>
+              <div><i class="fas fa-wifi"></i> Access Point (AP)</div>
+              <div><i class="fas fa-microchip"></i> Switch</div>
+              <div><i class="fas fa-plug"></i> IO (Information Outlet)</div>
+              <div><i class="fas fa-exchange-alt"></i> Patch Cable</div>
+              <div><i class="fas fa-cut"></i> Crimping / Recrimping</div>
+              <div><i class="fas fa-plug"></i> RJ45 / RJ11</div>
+              <div><i class="fas fa-server"></i> Data Cabinet</div>
+              <div><i class="fas fa-ticket-alt"></i> Ticket</div>
+              <div><i class="fas fa-wifi-slash"></i> "No internet"</div>
+              <div><i class="fas fa-ethernet"></i> "No Ethernet link"</div>
+              <div><i class="fas fa-phone-slash"></i> "No TFTP response"</div>
+              <div><i class="fas fa-terminal"></i> Ping</div>
+              <div><i class="fas fa-code"></i> Ipconfig</div>
+              <div>
+                <i class="fas fa-globe"></i> Proxy (proxyserver828:3128)
+              </div>
+              <div><i class="fas fa-exchange-alt"></i> Port switching</div>
+              <div><i class="fas fa-cable-car"></i> Recabling</div>
+            </div>
+            <div class="ticket-flow">
+              <h3><i class="fas fa-ticket-alt"></i> Ticket Lifecycle (ITSM)</h3>
+              <div class="flow-steps">
+                <span>Receive</span> <i class="fas fa-arrow-right"></i>
+                <span>Probe</span> <i class="fas fa-arrow-right"></i>
+                <span>Diagnose</span> <i class="fas fa-arrow-right"></i>
+                <span>Resolve</span> <i class="fas fa-arrow-right"></i>
+                <span>Document</span> <i class="fas fa-arrow-right"></i>
+                <span>Close</span>
+              </div>
+              <img
+                src="assets/itsm_lifecycle.png"
+                alt="itsm_lifecycle"
+                width="350px"
+                style="border-radius: 50%"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 7 - COMPLETE NETWORK TERMINOLOGY & COMPONENTS -->
+        <div class="slide" data-slide="7">
+          <div class="slide-header">
+            <i class="fas fa-microchip"></i>
+            <h2>Complete Network Terminology · Components & Daily Tools</h2>
+          </div>
+          <div class="slide-content">
+            <div class="table-wrapper">
+              <table class="component-table">
+                <thead>
+                  <tr>
+                    <th style="width: 18%">Component / Term</th>
+                    <th style="width: 42%">Function / Purpose</th>
+                    <th style="width: 40%">Field Notes / Daily Usage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-network-wired"></i> LAN / WAN</td>
+                    <td>
+                      Local Area Network (LAN) connects devices within a single
+                      location (office, building). Wide Area Network (WAN)
+                      connects multiple locations across distances (branch to
+                      main office).
+                    </td>
+                    <td>
+                      Daily operations involve LAN installation, WAN
+                      connectivity monitoring, and troubleshooting "No internet"
+                      issues across 234+ SSS locations.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-phone-alt"></i> IP Phone</td>
+                    <td>
+                      VoIP telephone that uses the network connection instead of
+                      traditional phone lines for voice communication.
+                    </td>
+                    <td>
+                      Common errors: <strong>"No TFTP response"</strong> →
+                      reconfigure IP via phone's ipconfig menu.
+                      <strong>"No Ethernet link"</strong> → check cable
+                      connection or port switching.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-wifi"></i> Access Point (AP)</td>
+                    <td>
+                      Device that extends wireless network coverage by
+                      converting wired signals into Wi-Fi for wireless clients.
+                    </td>
+                    <td>
+                      Daily AP install and decommission. Requires PoE (Power
+                      over Ethernet) from switch. Troubleshoot with
+                      <strong>ping</strong> to verify connectivity.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-microchip"></i> Switch</td>
+                    <td>
+                      Central device connecting multiple devices within a LAN.
+                      Forwards data using MAC addresses and manages network
+                      traffic.
+                    </td>
+                    <td>
+                      <strong>Port switching</strong> is common when relocating
+                      workstations. NMS handles VLAN configuration.
+                      <strong>Recabling</strong> may be needed if port is
+                      damaged.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-plug"></i> IO (Information Outlet)</td>
+                    <td>
+                      Wall-mounted jack terminating horizontal cabling. End
+                      devices connect here via patch cable.
+                    </td>
+                    <td>
+                      Test with <strong>LAN Tester</strong> for continuity.
+                      Damaged IO requires replacement. Split cabling allows one
+                      IO to support both PC and IP Phone.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-exchange-alt"></i> Patch Cable</td>
+                    <td>
+                      Short stranded UTP cable used to connect devices to IOs,
+                      or patch panels to switches inside the
+                      <strong>Data Cabinet</strong>.
+                    </td>
+                    <td>
+                      Prepared in various lengths (1.5m, 2.5m, 3m). Damaged
+                      patch cables cause "No Ethernet link" issues → replace via
+                      <strong>recabling</strong>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-cut"></i> Crimping / Recrimping</td>
+                    <td>
+                      Process of attaching RJ45 or RJ11 connectors to UTP cable
+                      using a <strong>Crimping Tool</strong>. Recrimping means
+                      re-terminating a faulty connector.
+                    </td>
+                    <td>
+                      Intermittent "No internet"? Recrimp using all 8 pins. A
+                      connector with only 4 pins crimped causes random
+                      disconnections. Always test with
+                      <strong>LAN Tester</strong> after crimping.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-plug"></i> RJ45 / RJ11</td>
+                    <td>
+                      RJ45 = 8-pin connector for Ethernet (LAN, IP Phone). RJ11
+                      = 4-pin connector for analog telephone lines.
+                    </td>
+                    <td>
+                      RJ45 used for LAN, IP Phone, Access Points. RJ11 used for
+                      direct telephone lines. Loose RJ45 causes "No Ethernet
+                      link". Replace via <strong>recrimping</strong>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-server"></i> Data Cabinet</td>
+                    <td>
+                      Enclosure housing network equipment: switches, patch
+                      panels, and cable management.
+                    </td>
+                    <td>
+                      Organized data cabinet reduces troubleshooting time.
+                      Contains patch panels connected to switches via patch
+                      cables. Port switching happens inside the data cabinet.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fas fa-ticket-alt"></i> Ticket / Escalation
+                    </td>
+                    <td>
+                      Formal request recorded in ITSM system.
+                      <strong>Ticket escalation</strong> means forwarding to
+                      other support level (NMS, CMS) when issue cannot be
+                      resolved.
+                    </td>
+                    <td>
+                      <strong>Client</strong> reports issue → ticket created →
+                      diagnose → if VLAN issue, escalate to
+                      <strong>NMS</strong>. If carrier issue, escalate to
+                      <strong>CMS</strong>. For other non-network-related
+                      issues, escalete to <strong>other Department</strong> .
+                      Always document resolution before closing ticket.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fas fa-exclamation-triangle"></i> "No internet"
+                    </td>
+                    <td>
+                      End-user cannot access internet or network resources. One
+                      of the most common daily tickets.
+                    </td>
+                    <td>
+                      You may try: Check proxy settings
+                      (<code>proxyserver828:3128</code>), run
+                      <strong>ipconfig /release & /renew</strong>,
+                      <strong>ping</strong> gateway, verify physical connection,
+                      or try <strong>port switching</strong>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-ethernet"></i> "No Ethernet link"</td>
+                    <td>
+                      Physical layer issue: No signal detected between device
+                      and switch. Link light is off.
+                    </td>
+                    <td>
+                      Fix: Check patch cable, try <strong>recabling</strong>,
+                      test with <strong>LAN Tester</strong>, verify IO
+                      connection, or try <strong>port switching</strong> on
+                      switch.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fas fa-phone-slash"></i> "No TFTP response"
+                    </td>
+                    <td>
+                      IP Phone cannot download configuration from TFTP server.
+                      Phone powers on but cannot register.
+                    </td>
+                    <td>
+                      Fix: Reconfigure IP address via phone's ipconfig menu. Set
+                      wired VLAN (32/33/34 based on floor). May require NMS
+                      assistance.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-terminal"></i> Ping</td>
+                    <td>
+                      Command-line tool testing connectivity between devices by
+                      sending ICMP (Internet Control Message Protoco) echo
+                      requests.
+                    </td>
+                    <td>
+                      <code>ping 10.1 -t</code> = continuous test to gateway.<br /><code
+                        >ping 1.1.1.1</code
+                      >
+                      = external connectivity.<br /><code
+                        >ping wfh.sss.gov.ph</code
+                      >
+                      = VPN endpoint test.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-code"></i> Ipconfig</td>
+                    <td>
+                      Command-line tool displaying IP configuration, MAC
+                      address, DHCP status, and DNS settings.
+                    </td>
+                    <td>
+                      <code>ipconfig /all</code> → get MAC address for NMS.<br /><code
+                        >ipconfig /release & /renew</code
+                      >
+                      → refresh IP lease. First step for "No internet"
+                      troubleshooting.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fas fa-globe"></i> Proxy (proxyserver828:3128)
+                    </td>
+                    <td>
+                      Intermediary server filtering internet requests. Required
+                      for intranet access within SSS network.
+                    </td>
+                    <td>
+                      Main proxy: <code>proxyserver828:3128</code>. First-time
+                      AD users MUST configure proxy after LAN connection.
+                      Without proxy → "No internet" for intranet sites.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-exchange-alt"></i> Port switching</td>
+                    <td>
+                      Moving a network cable from one switch port to another to
+                      resolve connectivity issues or accommodate workstation
+                      moves.
+                    </td>
+                    <td>
+                      Common fix for "No Ethernet link" or dead ports. When
+                      relocating a workstation, the corresponding switch port
+                      must also be switched. Document port changes.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-ethernet"></i> Recabling</td>
+                    <td>
+                      Replacing an entire network cable (patch cable or
+                      horizontal run) due to damage or failure.
+                    </td>
+                    <td>
+                      Rodent damage is #1 cause for recabling. Also used when
+                      <strong>LAN Tester</strong> shows open/short circuit.
+                      Recabling solves many "No Ethernet link" tickets.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-chart-line"></i> LAN Tester</td>
+                    <td>
+                      Device testing continuity, pin mapping, shorts, opens, and
+                      split pairs in UTP cables.
+                    </td>
+                    <td>
+                      <strong>Essential daily tool.</strong> Test every cable
+                      after <strong>crimping/recrimping</strong>. Verify IO
+                      terminations. Never leave for a ticket without it.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-cut"></i> Crimping Tool</td>
+                    <td>
+                      Tool attaching RJ45/RJ11 connectors to UTP cable by
+                      pressing metal pins through wire insulation.
+                    </td>
+                    <td>
+                      Used daily for preparing patch cables and
+                      <strong>recrimping</strong> faulty connectors. Requires
+                      proper pressure — too light = intermittent connection.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-plug"></i> UTP Cable</td>
+                    <td>
+                      Unshielded Twisted Pair cable (Cat5e, Cat6) for network
+                      connections. Four twisted pairs inside outer jacket.
+                    </td>
+                    <td>
+                      Standard for LAN drops, patch cables, and IO terminations.
+                      Cat6 preferred for new installations. Keep spare bulk UTP
+                      spool for onsite <strong>recabling</strong>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-mobile-alt"></i> MyPCInfo</td>
+                    <td>
+                      Internal SSS application displaying hostname, IP address,
+                      MAC address, and system information instantly.
+                    </td>
+                    <td>
+                      <strong>Daily tool.</strong> Faster than CMD for getting
+                      client info. MAC address needed for NMS IP assignment. Use
+                      before escalating any ticket.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-laptop"></i> AnyDesk</td>
+                    <td>
+                      Remote desktop software used for assisting
+                      <strong>clients</strong> in Work-From-Home setups.
+                    </td>
+                    <td>
+                      Client must be on separate WiFi/mobile data. Verify with
+                      <strong>ping</strong> before connecting. Never share
+                      credentials via email.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-shield-alt"></i> FortiClient</td>
+                    <td>
+                      VPN client for secure Work-From-Home access to SSS
+                      network.
+                    </td>
+                    <td>
+                      Requires Department Head approval. IPSEC VPN to
+                      <code>wfh.sss.gov.ph</code>. After login,
+                      <strong>ping prs:7777/m8</strong> to verify.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-cog"></i> NMS (VLAN config)</td>
+                    <td>
+                      Network Management Section responsible for VLAN
+                      configuration, IP addressing, and switch management.
+                    </td>
+                    <td>
+                      When <strong>client</strong> has IP but cannot access
+                      resources → escalate ticket to <strong>NMS</strong> for
+                      VLAN reconfiguration. Provide hostname, MAC address, and
+                      switch port.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-user"></i> Client</td>
+                    <td>
+                      End-user reporting the issue. The person requesting
+                      technical assistance.
+                    </td>
+                    <td>
+                      <strong>Probe the client first:</strong> Ask about recent
+                      changes (station transfer, new PC, office move) before
+                      touching hardware. Good client communication = faster
+                      resolution.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 9 - CRIMPING STANDARDS T568A vs T568B + STRAIGHT-THROUGH & CROSSOVER -->
+        <div class="slide" data-slide="9">
+          <div class="slide-header">
+            <i class="fas fa-plug"></i>
+            <h2>Crimping Standards · T568A vs T568B</h2>
+          </div>
+          <div class="slide-content">
+            <div class="cable-types">
+              <div class="cable-card">
+                <img
+                  src="assets/standard_b.png"
+                  alt="standard_b"
+                  style="width: 300px; height: 100px"
+                />
+                <h3>
+                  <i class="fas fa-arrows-alt-h"></i> Straight-through Cable
+                </h3>
+                <div class="cable-diagram">
+                  <div class="end">
+                    End 1<br /><span class="small">T568B</span>
+                  </div>
+                  <div class="arrow">════════════►</div>
+                  <div class="end">
+                    End 2<br /><span class="small">T568B</span>
+                  </div>
+                </div>
+                <p>
+                  <strong>Same standard on both ends</strong> (T568B to T568B or
+                  T568A to T568A).
+                </p>
+                <p>
+                  <strong>Purpose:</strong> Connects different devices (PC to
+                  Switch, PC to Router, IP Phone to Switch).
+                </p>
+                <p class="usage">
+                  <strong>Daily usage at SSS:</strong> 95% of cables made are
+                  straight-through — used for connecting PCs, IP Phones, and
+                  Access Points to switches.
+                </p>
+              </div>
+              <div class="cable-card">
+                <img
+                  src="assets/crossover.png"
+                  alt="cross_over"
+                  style="width: 300px; height: 100px"
+                />
+                <h3><i class="fas fa-exchange-alt"></i> Crossover Cable</h3>
+                <div class="cable-diagram">
+                  <div class="end">
+                    End 1<br /><span class="small">T568B</span>
+                  </div>
+                  <div class="arrow">══✗══►</div>
+                  <div class="end">
+                    End 2<br /><span class="small">T568A</span>
+                  </div>
+                </div>
+                <p>
+                  <strong>Different standards on each end</strong> (T568B to
+                  T568A). Transmit pins connect to Receive pins.
+                </p>
+                <p>
+                  <strong>Purpose:</strong> Connects similar devices directly
+                  (PC to PC, Switch to Switch, Router to Router) without a
+                  switch/hub.
+                </p>
+                <p class="usage">
+                  <strong>Note:</strong> Modern switches support Auto-MDI/X,
+                  automatically detecting cable type — crossover cables are
+                  rarely needed today.
+                </p>
+              </div>
+              <table class="crimping-table">
+                <thead>
+                  <tr>
+                    <th>Pin</th>
+                    <th>T568A Color</th>
+                    <th>T568B Color</th>
+                    <th>Pair Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="wire-color">White/Green</td>
+                    <td class="wire-color">White/Orange</td>
+                    <td>Tx+ (Transmit positive)</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="wire-color">Green</td>
+                    <td class="wire-color">Orange</td>
+                    <td>Tx- (Transmit negative)</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="wire-color">White/Orange</td>
+                    <td class="wire-color">White/Green</td>
+                    <td>Rx+ (Receive positive)</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="wire-color">Blue</td>
+                    <td class="wire-color">Blue</td>
+                    <td>Unused / PoE</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td class="wire-color">White/Blue</td>
+                    <td class="wire-color">White/Blue</td>
+                    <td>Unused / PoE</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td class="wire-color">Orange</td>
+                    <td class="wire-color">Green</td>
+                    <td>Rx- (Receive negative)</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td class="wire-color">White/Brown</td>
+                    <td class="wire-color">White/Brown</td>
+                    <td>Unused / PoE</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td class="wire-color">Brown</td>
+                    <td class="wire-color">Brown</td>
+                    <td>Unused / PoE</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Cable Type</th>
+                  <th>End 1 Standard</th>
+                  <th>End 2 Standard</th>
+                  <th>When to Use</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Straight-through</strong></td>
+                  <td>T568B (or A)</td>
+                  <td>T568B (or A) — SAME</td>
+                  <td>
+                    PC → Switch, IP Phone → Switch, AP → Switch, PC → Router
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Crossover</strong></td>
+                  <td>T568B</td>
+                  <td>T568A — DIFFERENT</td>
+                  <td>
+                    PC → PC, Switch → Switch, Router → Router (legacy devices)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="tip">
+              <i class="fas fa-info-circle"></i>
+              <strong>Purpose & Usage:</strong> T568B is most common in the
+              Philippines (compatible with US standards). T568A is required for
+              US government contracts.
+              <strong
+                >Always keep both ends the SAME standard for straight-through
+                cables.</strong
+              >
+              Mixing A/B creates a crossover cable.
+            </div>
+            <div class="tip">
+              <i class="fas fa-tools"></i> <strong>Field Tip:</strong> Always
+              double-check both ends before crimping. Intermittent "No
+              internet"? Recrimp using all 8 pins — we once found a connector
+              with only 4 pins crimped that caused random disconnections!
+            </div>
+            <div class="tip">
+              <i class="fas fa-memory"></i> <strong>Memory Trick:</strong>
+              <strong>Straight = Same</strong> (both ends identical) → connects
+              <strong>Different</strong> devices.<br /><strong
+                >Crossover = Crossed</strong
+              >
+              (ends different) → connects <strong>Same</strong> devices.
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 10 - IP ADDRESSING -->
+        <div class="slide" data-slide="10">
+          <div class="slide-header">
+            <i class="fa-solid fa-sitemap"></i>
+            <h2>IP Addressing · SSS Environment</h2>
+          </div>
+          <div class="slide-content two-column">
+            <div class="info-card">
+              <img
+                src="/assets/officewired.png"
+                alt="office_wired"
+                style="width: 300px; height: 175px"
+              /><br /><strong>10.x.x.x</strong><br />LAN / Private IP<br />(office
+              wired network)
+            </div>
+            <div class="info-card">
+              <img
+                src="/assets/officewifi.png"
+                alt="office_wifi"
+                style="width: 300px; height: 175px"
+              /><br /><strong>172.x.x.x</strong><br />WiFi / Private IP range<br />(wireless
+              clients)
+            </div>
+            <div class="info-card">
+              <img
+                src="/assets/loopback.png"
+                alt="office_wifi"
+                style="width: 300px; height: 175px"
+              /><br /><strong>127.0.0.1</strong><br />Localhost / Loopback<br />(no
+              network connection)
+            </div>
+            <div class="info-card">
+              <img
+                src="/assets/169.png"
+                alt="169.254"
+                style="width: 300px; height: 175px"
+              /><br /><strong>169.254.x.x</strong><br />APIPA - Automatic
+              Private IP Addressing<br />(DHCP server unreachable)
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 11 - SSS NETWORK DIAGRAM -->
+        <div class="slide" data-slide="11">
+          <div class="slide-header">
+            <i class="fas fa-project-diagram"></i>
+            <h2>SSS Network Diagram</h2>
+          </div>
+          <div class="slide-content">
+            <div class="diagram-grid">
+              <!-- Main Office Diagram -->
+              <div class="diagram-card">
+                <h3>
+                  <i class="fas fa-building"></i> SSS Main Office · East Avenue,
+                  Quezon City
+                </h3>
+                <div class="diagram-placeholder">
+                  <img
+                    src="assets/mainoffice_network_diagram.png"
+                    alt="main_office"
+                    width="1250px"
+                  />
+                </div>
+              </div>
+
+              <!-- Branches Diagram -->
+              <div class="diagram-card">
+                <h3>
+                  <i class="fas fa-code-branch"></i> SSS Branches Nationwide
+                </h3>
+                <div class="diagram-placeholder">
+                  <img
+                    src="assets/branch_network_diagram.png"
+                    alt="main_office"
+                    width="1250px"
+                  />
+                </div>
+              </div>
+
+              <!-- Complete Network Diagram -->
+              <div class="diagram-card full-width">
+                <h3>
+                  <i class="fas fa-globe"></i> SSS Complete Network Architecture
+                </h3>
+                <div class="diagram-placeholder large">
+                  <img
+                    src="assets/sss_network_diagram.png"
+                    alt="main_office"
+                    width="1250px"
+                  />
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="tip">
+              <i class="fas fa-info-circle"></i> <strong>Note:</strong> Diagrams
+              are for reference.
+            </div>
+          </div>
+        </div>
+        <!-- SLIDE 11 - ESSENTIAL COMMANDS -->
+        <div class="slide" data-slide="11">
+          <div class="slide-header">
+            <i class="fas fa-code"></i>
+            <h2>Essential Network Commands</h2>
+          </div>
+
+          <div class="slide-content" style="padding-left: 30px">
+            <div class="cmd-codes">
+              <dl>
+                <dt style="margin-bottom: 5px; margin-top: 10px">
+                  <code>ipconfig</code>
+                </dt>
+                <dd>
+                  Displays basic IP address configurations for all network
+                  adapters.
+                </dd>
+
+                <dt style="margin-bottom: 5px; margin-top: 10px">
+                  <code>ipconfig /all</code>
+                </dt>
+                <dd>
+                  Shows detailed network settings, including MAC (Physical)
+                  addresses and DNS servers.
+                </dd>
+
+                <dt style="margin-bottom: 5px; margin-top: 10px">
+                  <code>ipconfig /release</code>
+                </dt>
+                <dd>
+                  Releases the current DHCP IP address lease from the network
+                  adapter.
+                </dd>
+
+                <dt style="margin-bottom: 5px; margin-top: 10px">
+                  <code>ipconfig /renew</code>
+                </dt>
+                <dd>
+                  Requests a new IP address configuration from the DHCP server.
+                </dd>
+
+                <dt style="margin-bottom: 5px; margin-top: 10px">
+                  <code>ping 10.0.0.1 -t</code>
+                </dt>
+                <dd>
+                  Continuously pings the specified target until manually stopped
+                  (Ctrl + C).
+                </dd>
+
+                <dt style="margin-bottom: 5px; margin-top: 10px">
+                  <code>ping 1.1.1.1</code>
+                </dt>
+                <dd>
+                  Tests basic internet connectivity using Cloudflare's public
+                  DNS server.
+                </dd>
+
+                <dt style="margin-bottom: 5px; margin-top: 10px">
+                  <code>ping wfh.sss.gov.ph</code>
+                </dt>
+                <dd>
+                  Checks connectivity and resolves the IP address for the SSS
+                  Work From Home portal.
+                </dd>
+
+                <dt style="margin-bottom: 5px; margin-top: 10px">
+                  <code>ping prs:7777/m8</code>
+                </dt>
+                <dd>
+                  Checks connectivity and resolves the IP address for the SSS M8
+                  system.
+                </dd>
+
+                <dt style="margin-bottom: 5px; margin-top: 10px">
+                  <code>ncpa.cpl</code>
+                </dt>
+                <dd>
+                  Opens the Network Connections window directly from Control
+                  Panel.
+                </dd>
+              </dl>
+            </div>
+            <div class="tip">
+              <i class="fas fa-lightbulb"></i>
+              <strong>Pro Tip:</strong>
+              Use <code>ipconfig /all</code> to find the MAC address required
+              for NMS IP assignment. <code>ping -t</code> is useful for
+              monitoring intermittent connection drops.
+              <code>ncpa.cpl</code> instantly opens the Network Connections
+              window.
+            </div>
+          </div>
+        </div>
+        <!-- SLIDE 12 - PROXY CONFIGURATION -->
+        <div class="slide" data-slide="12">
+          <div class="slide-header">
+            <i class="fas fa-globe"></i>
+            <h2>Proxy Configuration</h2>
+          </div>
+          <div
+            class="slide-content"
+            style="padding-left: 30px; padding-right: 30px"
+          >
+            <div class="diagram-card">
+              <center>
+                <img
+                  src="assets/proxysetting.png"
+                  alt="proxysetting"
+                  width="1000px"
+                />
+              </center>
+
+              <br />
+              <div class="proxy-box" style="font-size: 16px">
+                <h3><i class="fas fa-server"></i> SSS Proxy Addresses</h3>
+                <p>
+                  <strong>Address:Port: </strong><br />
+                  <code>proxyserver828:3128</code> (Main Office - default)
+                  <code>proxyserver</code> (SSS Branches)
+                </p>
+                <p>
+                  <code>10.0.151.136</code> / <code>10.0.151.137</code> /
+                  <code>10.0.151.138</code> / <code>10.0.151.139</code> (IP
+                  alternatives)
+                </p>
+                <p>
+                  <strong>URL: </strong><br />
+                  <code>*sss.gov.ph ;*. sss.local ;*. corporate.sss;10*</code>
+                </p>
+
+                <div class="important">
+                  <i class="fas fa-exclamation-triangle"></i> ⚠️ First-time AD
+                  users MUST configure proxy after LAN connection — otherwise
+                  intranet sites won't load!
+                </div>
+              </div>
+              <div class="tip">
+                <i class="fas fa-question-circle"></i>
+                <strong>Proxy Troubleshooting:</strong> If internet works but
+                intranet sites fail, try switching to alternate proxy address.
+                If proxy is not activated on LAN connection, the user will have
+                no network access at all.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 13 - FORTICLIENT WFH SETUP -->
+        <div class="slide" data-slide="13">
+          <div class="slide-header">
+            <i class="fas fa-home"></i>
+            <h2>FortiClient · Work From Home Setup</h2>
+          </div>
+          <div
+            class="slide-content"
+            style="padding-left: 30px; padding-right: 30px"
+          >
+            <div class="wfh-box" two-column>
+              <h3>
+                <i class="fas fa-network-wired"></i> Step-by-Step WFH Process
+              </h3>
+              <br />
+              <img
+                src="assets/forticlient.png"
+                alt="forticlient"
+                width="500px"
+              />
+              <ol>
+                <li>
+                  Client must be on separate WiFi/mobile data (NOT connected to
+                  corporate network)
+                </li>
+                <li>
+                  Run <code>ipconfig /all</code> to verify network adapter
+                  status
+                </li>
+                <li>
+                  Ping <code>wfh.sss.gov.ph</code>
+                  connection
+                </li>
+                <li>Then create new IPSEC VPN connection</li>
+                <li>
+                  For service offices: use <code>svc.sss.gov.ph</code> as
+                  gateway
+                </li>
+                <li>
+                  Login with AD credentials → then ping
+                  <code>prs:7777/m8</code> to verify
+                </li>
+                <li>
+                  Activation requires Department Head approval before scheduling
+                </li>
+              </ol>
+            </div>
+            <div class="tip">
+              <i class="fas fa-clock"></i> <strong>Note:</strong> When a
+              FortiClient activation is scheduled, it will automatically
+              activate approximately 5 minutes before the set start time (e.g.,
+              8:00 AM schedule activates around 7:55 AM).
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 14 - SWITCH & VLAN BASICS -->
+        <div class="slide" data-slide="14">
+          <div class="slide-header">
+            <i class="fas fa-exchange-alt"></i>
+            <h2>Switch & VLAN Fundamentals</h2>
+          </div>
+          <div
+            class="slide-content"
+            style="padding-left: 30px; padding-right: 30px"
+          >
+            <div class="led-guide">
+              <div>
+                <span class="led green"></span> <strong>Green LED</strong> =
+                Endpoint has PC only
+              </div>
+              <div>
+                <span class="led amber"></span> <strong>Amber LED</strong> =
+                Endpoint has both PC + IP Phone (PoE active)
+              </div>
+            </div>
+            <div class="tip">
+              <i class="fas fa-exclamation-triangle"></i>
+              <strong>Trunk lines:</strong>Normally (as per NMS), Ports 1 and 24
+              on Alcatel switches are often trunk lines — DO NOT connect end
+              devices to these ports!
+            </div>
+            <div class="tip">
+              <i class="fas fa-share"></i> <strong>VLAN Mismatch:</strong> When
+              PC gets IP address but cannot access network resources → escalate
+              to NMS for VLAN reconfiguration immediately. Don't waste hours
+              troubleshooting.
+            </div>
+            <div class="tip">
+              <i class="fas fa-info-circle"></i>
+              <strong>Port Assignment:</strong> When transferring a workstation,
+              the corresponding port number at the switch in the data cabinet
+              must also be transferred to ensure connectivity.
+            </div>
+            <div class="tip">
+              <i class="fas fa-phone-alt"></i>
+              <strong>IP Phone VLANs</strong><br />
+              <img
+                src="assets/vlan_per_floor.png"
+                alt="vlan_per_floor"
+                width="450px"
+              />
+              <br />
+              <strong>32</strong> = Ground and Second Floor,
+              <strong>33</strong> = 4th-7th Floors, and <strong>34</strong> =
+              8th Floor and Above
+              <p>
+                Note: Manual configuration of the IP phone VLAN applies to Cisco
+                switch connections, not Alcatel.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 16 - TOOLS & TESTERS -->
+        <div class="slide" data-slide="16">
+          <div class="slide-header">
+            <i class="fas fa-tools"></i>
+            <h2>Essential Tools & Testers</h2>
+          </div>
+          <div
+            class="slide-content three-column"
+            style="padding-left: 10px; padding-right: 10px"
+          >
+            <div class="info-card">
+              <i class="fas fa-cut"></i>
+              <h3>Crimping Tool</h3>
+              <p>
+                Crimps RJ45 connectors onto UTP cable. Requires proper pressure
+                to pierce wire insulation.
+              </p>
+              <img
+                src="assets/crimping_tool.jpg"
+                alt="crimping tool"
+                width="150px"
+              />
+            </div>
+            <div class="info-card">
+              <i class="fas fa-chart-line"></i>
+              <h3>LAN Tester</h3>
+              <p>
+                Tests continuity, pin mapping, shorts, opens, and split pairs.
+                Essential for structured cabling validation.
+              </p>
+              <img src="assets/lan_tester.jpg" alt="lan tester" width="150px" />
+              <img
+                src="assets/lan_tester2.jpg"
+                alt="lan tester"
+                width="150px"
+              />
+            </div>
+            <div class="info-card">
+              <i class="fas fa-microchip"></i>
+              <h3>Punch Down Tool</h3>
+              <p>
+                For terminating cables into patch panels and IOs (110/Krone/66
+                block types).
+              </p>
+              <img
+                src="/assets/punch_down.png"
+                alt="punch down tool"
+                width="100px"
+              />
+            </div>
+
+            <div class="info-card">
+              <i class="fas fa-volume-up"></i>
+              <h3>Tone Tracer</h3>
+              <p>
+                Traces cables across bundles, patch panels, and wall jacks by
+                sending an audible tone.
+              </p>
+              <img src="/assets/tone_tracer.jpg" alt="" width="150px" />
+            </div>
+            <div class="info-card">
+              <i class="fas fa-hand-peace"></i>
+              <h3>Cable Stripper</h3>
+              <p>
+                Rotary or fixed-blade tool for removing jacket without nicking
+                inner conductors.
+              </p>
+              <img
+                src="assets/cable_stripper.png"
+                alt="cable stripper"
+                width="250px"
+              />
+            </div>
+            <div class="info-card">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>MyPCInfo App</h3>
+              <p>
+                Internal SSS application to get hostname, IP address quickly
+                without using CMD.
+              </p>
+              <img src="assets/mypcinfo.png" alt="mypcinfoapp" width="300px" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 17 - TROUBLESHOOTING COMMON ISSUES -->
+        <div class="slide" data-slide="17">
+          <div class="slide-header">
+            <i class="fas fa-bug"></i>
+            <h2>Troubleshooting · Common Issues & Fixes</h2>
+          </div>
+          <div
+            class="slide-content"
+            style="padding-left: 30px; padding-right: 30px"
+          >
+            <div class="tip">
+              <strong>🔴 No TFTP response (IP Phone):</strong> Reconfigure IP
+              via phone's ipconfig menu, set wired VLAN (32/33/34 based on
+              floor).
+            </div>
+            <div class="tip">
+              <strong>🟡 Intermittent LAN connection:</strong> Check RJ45 crimp
+              (all 8 pins must be properly terminated), inspect for loose
+              connector, or check for rodent-damaged cable.
+            </div>
+            <div class="tip">
+              <strong>🟢 IP pingable but no internet/browser:</strong> Disable
+              DNS (ncpa.cpl → IPv4 properties) or verify proxy settings are
+              correct.
+            </div>
+            <div class="tip">
+              <strong>🔵 2 IP addresses detected:</strong> FortiClient closed
+              improperly. Deactivate it via user admin or sync the client
+              account, then restart. Also, ensure the device is not connected to
+              both LAN and Wi-Fi simultaneously.
+            </div>
+            <div class="tip">
+              <strong>🟠 Printer not connecting:</strong> Check if printer is
+              powered on, verify IP address (may need reconfiguration after
+              move), check VLAN mismatch.
+            </div>
+            <div class="tip">
+              <strong>⚪ No ethernet link:</strong> Check physical cable
+              connection, try different port on switch, verify IO is functional
+              with LAN tester.
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 18 - TIPS FROM THE FIELD -->
+        <div class="slide" data-slide="18">
+          <div class="slide-header">
+            <i class="fas fa-lightbulb"></i>
+            <h2>Tips & Best Practices · From the Field</h2>
+          </div>
+          <div
+            class="slide-content two-column"
+            style="padding-left: 30px; padding-right: 30px"
+          >
+            <div class="tip">
+              <i class="fas fa-question-circle"></i>
+
+              <strong>Probe first:</strong> Always ask client about recent
+              changes (station transfer, new PC, office move) before touching
+              any hardware. It cuts diagnosis time in half.
+              <br />
+              <img src="assets/ask.png" alt="ask_first" width="100px" />
+            </div>
+            <div class="tip">
+              <i class="fas fa-power-off"></i>
+              <strong>Restart before panic:</strong> Simple PC restart resolves
+              20% of "no internet" issues, especially after IP changes or VPN
+              use.
+              <br />
+              <br />
+              <img src="assets/restart.jpg" alt="restart" width="60px" />
+            </div>
+            <div class="tip">
+              <i class="fas fa-plug"></i>
+              <strong>Loose RJ45 = gremlin:</strong> Intermittent connection?
+              Recrimp using all 8 pins. A connector with only 4 pins crimped was
+              causing random disconnections daily.
+              <br />
+              <img src="assets/rj45.jpg" alt="rj45" width="100px" />
+            </div>
+            <div class="tip">
+              <i class="fas fa-mouse"></i>
+              <strong>Rodent damage is real:</strong> Cable bites cause outages;
+              always check under desks and ceiling trays. Re-cabling solved many
+              cases.
+              <br />
+              <img src="assets/rodent.png" alt="rodent_damage" width="150px" />
+            </div>
+            <div class="tip">
+              <i class="fas fa-chart-simple"></i>
+              <strong>VLAN mismatch escalation:</strong> When connection works
+              but can't access resources, ask NMS to reassign VLAN immediately.
+              Don't waste hours.
+              <br />
+              <img src="assets/vlan.png" alt="vlan_mismatch" width="100px" />
+            </div>
+            <div class="tip">
+              <i class="fas fa-tasks"></i>
+              <strong>Document everything:</strong> Every resolution builds the
+              knowledge base. Future interns and team members will thank you.
+              <br />
+              <img src="assets/document.png" alt="document" width="100px" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 19 - 5S METHODOLOGY -->
+        <div class="slide" data-slide="19">
+          <div class="slide-header">
+            <i class="fas fa-hand-sparkles"></i>
+            <h2>5S Workplace Organization Methodology</h2>
+          </div>
+          <div class="slide-content three-column"></div>
+          <center><img src="assets/5s.png" alt="5s" width="850px" /></center>
+        </div>
+
+        <!-- SLIDE 20 - DIRECT LINE & TELEPHONY -->
+        <div class="slide" data-slide="20">
+          <div class="slide-header">
+            <i class="fas fa-phone-alt"></i>
+            <h2>Direct Line & Telephony</h2>
+          </div>
+          <div class="slide-content two-column">
+            <div class="tip">
+              <strong>Path:</strong> The network path originates from the PLDT
+              Exchange and runs to the main XCT panel. From there, it connects
+              to the Data Center XCT, routes to the local IDF, and terminates at
+              the dedicated floor patch panel.
+              <br />
+              <br />
+
+              <img
+                src="assets/directline_transmission.png"
+                alt="pldt"
+                width="500px"
+                height="200px"
+              />
+            </div>
+            <div class="tip">
+              <strong>Troubleshooting:</strong> Static line often caused by
+              loose handset or damaged cable. Replace cable or handset to
+              resolve.
+              <br />
+              <br />
+              <img
+                src="assets/staticline_troubleshooting.png"
+                alt="pldt"
+                width="500px"
+                height="175px"
+              />
+            </div>
+            <div class="tip">
+              <strong>Direct Line Transfer:</strong> Process involves
+              wiretapping to confirm line, then transferring to new port at data
+              center.
+              <br />
+              <br />
+              <img
+                src="assets/wiretapping.png"
+                alt="pldt"
+                width="500px"
+                height="175px"
+              />
+            </div>
+            <div class="tip">
+              <strong>Carrier Management Section (CMS):</strong> Handles all ISP
+              coordination, PLDT relationships, and direct line provisioning.
+              <br />
+              <br />
+              <img
+                src="assets/cms_directline.png"
+                alt="cms"
+                width="500px"
+                height="175px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 21 - ACTIVE DIRECTORY & FIRST-TIME USERS -->
+        <div class="slide" data-slide="21">
+          <div class="slide-header">
+            <i class="fas fa-user-lock"></i>
+            <h2>Active Directory · First-Time Users</h2>
+          </div>
+          <div class="slide-content two-column">
+            <div class="tip">
+              <strong>First-time AD login:</strong> Device must be connected via
+              LAN (not Wi-Fi) for initial authentication.
+              <br />
+              <br />
+              <img
+                src="assets/first_login.jpg"
+                alt="first_login"
+                width="150px"
+                style="border-radius: 50%"
+              />
+              <img
+                src="assets/lanconnected.jpg"
+                alt="lan+_connected"
+                width="150px"
+                style="border-radius: 50%"
+              />
+              <img
+                src="assets/notwifi.png"
+                alt="not_wifi"
+                width="150px"
+                style="border-radius: 50%"
+              />
+            </div>
+
+            <div class="tip">
+              <strong>After login:</strong> Must set up proxy server setting
+              immediately (proxyserver828:3128) to establish network
+              connectivity.
+              <br />
+              <br />
+              <img
+                src="assets/proxyserver.png"
+                alt="proxy_setting"
+                width="350px"
+                height="220px"
+                style="border-radius: 5%"
+              />
+            </div>
+            <div class="tip">
+              <strong>Active Directory error:</strong> If user encounters a
+              "Wrong Credentials" prompt, the account may not be activated.
+              Escalate and forward the concern to the Network Management Section
+              (NMS) for activation.
+              <br />
+              <br />
+              <img
+                src="assets/wrong_credentials.png"
+                alt="wrong_credentials"
+                width="150px"
+              />
+              <img
+                src="assets/nms.jpg"
+                alt="not_wifi"
+                width="350px"
+                style="border-radius: 5%"
+              />
+            </div>
+
+            <div class="tip">
+              <strong>Troubleshooting:</strong> If old laptop's IP is
+              transferred to new laptop, old laptop may need temporary IP from
+              NMS to allow AD login.
+              <br />
+              <br />
+              <img
+                src="assets/laptop_laptop.png"
+                alt="laptop_laptop"
+                width="450px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 22 - STRUCTURED CABLING TESTING -->
+        <div class="slide" data-slide="22">
+          <div class="slide-header">
+            <i class="fas fa-check-circle"></i>
+            <h2>Structured Cabling Testing</h2>
+          </div>
+          <br />
+          <br />
+          <div class="slide-content three-column">
+            <div class="tip">
+              <strong>Testing Process:</strong> One person at data cabinet, one
+              at IO testing connections one by one using LAN tester.
+              <br /><br />
+              <img
+                src="assets/structured_cable_testing.png"
+                alt="structured_cable_testing"
+                width="350px"
+                height="300px"
+              />
+            </div>
+            <div class="tip">
+              <strong>Common Issues Found:</strong> Incorrect pinning, reverse
+              port tagging, ports with no reading, damaged ports/connectors.
+              <br /><br />
+              <img
+                src="assets/network_issues.png"
+                alt="network_issues"
+                width="350px"
+                height="300px"
+              />
+            </div>
+            <div class="tip">
+              <strong>Documentation:</strong> Record all test results
+              (pass/fail) with port numbers for future reference. <br /><br />
+              <img
+                src="assets/test_document.png"
+                alt="test_document"
+                width="350px"
+                height="300px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 23 - REMOTE SUPPORT & ANYDESK -->
+        <div class="slide" data-slide="23">
+          <div class="slide-header">
+            <i class="fas fa-desktop"></i>
+            <h2>Remote Support & AnyDesk</h2>
+          </div>
+          <div class="slide-content two-column">
+            <div class="tip">
+              <strong>WFH Remote Assistance:</strong> Client must be on
+              separate/independent WiFi or mobile data (not corporate network).
+              <br />
+              <br />
+              <img src="assets/WFH.png" alt="" width="400px" height="175px" />
+            </div>
+            <div class="tip">
+              <strong>Standard Steps:</strong> ipconfig /all → ping 1.1.1.1 →
+              ping wfh.sss.gov.ph → ping 1.1.1.1 -t for continuous monitoring.
+              <br />
+              <br />
+              <img
+                src="assets/wfh_standardsteps.png"
+                alt=""
+                width="400px"
+                height="175px"
+              />
+            </div>
+            <div class="tip">
+              <strong>FortiClient Remote Gateway Options:</strong>
+              wfh.sss.gov.ph (regular), svc.sss.gov.ph (service office),
+              ./useradmin for Remote Gateway.
+              <br />
+              <br />
+              <img
+                src="assets/wfh_forticlient.png"
+                alt=""
+                width="400px"
+                height="175px"
+              />
+            </div>
+            <div class="tip">
+              <strong>Security Note:</strong> Never share AnyDesk credentials
+              via email. Use phone verification before connecting.
+              <br />
+              <br />
+              <img
+                src="assets/wfh_anydesk.png"
+                alt=""
+                width="400px"
+                height="175px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 29 - FOR FUTURE STUDENT-INTERNS/ -->
+        <div class="slide" data-slide="29">
+          <div class="slide-header">
+            <i class="fas fa-compass"></i>
+            <h2>For Future Student Interns</h2>
+          </div>
+          <div
+            class="slide-content"
+            style="display: flex; gap: 20px; padding-left: 20px"
+          >
+            <div class="tip" style="flex: 1">
+              ✓ <strong>Master the LAN tester first</strong> — physical layer
+              issues (rodent bites, loose RJ45, damaged cables) are 50%+ of
+              tickets<br /><br />
+              ✓ <strong>Always check proxy settings</strong> — main branch uses
+              <strong>proxyserver828:3128</strong><br /><br />
+              ✓ <strong>Know your IP ranges by heart:</strong> 10.x.x.x (LAN) |
+              172.x.x.x (WiFi) | 169.x.x.x (VLAN) | 127.0.0.1 (no connection)<br /><br />
+              ✓ <strong>IP Phone "No TFTP response"?</strong> — reconfigure IP
+              via IP Phone ipconfig, set wired VLAN (32=ground, 33=4th-8th,
+              34=8th+)<br /><br />
+              ✓ <strong>Before touching hardware</strong> — run
+              <code>ipconfig /all</code>, check switch port lights, verify proxy
+              settings<br /><br />
+              ✓ <strong>Learn the three NCD sections:</strong> NOSS (hardware) |
+              NMS (software/VLAN/activation) | CMS (ISP/billing)<br /><br />
+              ✓
+              <strong>Escalate VLAN or IP assignment to NMS immediately</strong>
+              — don't waste time guessing<br /><br />
+              ✓ <strong>Use MyPCInfo app</strong> — instant hostname/IP address
+              (watch for dual IP when LAN+WiFi both active)<br /><br />
+              ✓ <strong>Switch port colors matter:</strong> Green = PC only |
+              Amber = PC + IP Phone<br /><br />
+              ✓ <strong>Avoid ports 1 & 24 on Alcatel switches</strong> — these
+              are trunk lines per NMS<br /><br />
+              ✓ <strong>Document every resolution</strong>
+            </div>
+            <div class="tip" style="flex: 1; text-align: center">
+              <img
+                src="assets/for_future_interns.png"
+                alt=""
+                style="width: 500px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 30 - SUMMARY & KEY TAKEAWAYS -->
+        <!-- SLIDE 30 - SUMMARY & KEY TAKEAWAYS (REVISED) -->
+        <div class="slide" data-slide="30">
+          <div class="slide-header">
+            <i class="fas fa-check-circle"></i>
+            <h2>Summary · Key Takeaways</h2>
+          </div>
+          <div
+            class="slide-content"
+            style="display: flex; flex-direction: column; gap: 12px"
+          >
+            <div class="info-card">
+              <i class="fas fa-network-wired"></i>
+              <strong>Our Role:</strong> NCD maintains secure, reliable
+              connectivity across 234+ SSS locations, handling everything from
+              LAN cabling to WAN links.
+            </div>
+
+            <div class="info-card">
+              <i class="fas fa-tasks"></i>
+              <strong>Smart Troubleshooting:</strong> Probe the client first,
+              then check the physical layer. If you have an IP but no access,
+              escalate VLAN issues to NMS immediately.
+            </div>
+            <div class="info-card">
+              <i class="fas fa-users"></i>
+              <strong>Department Structure:</strong> Know the three sections:
+              NOSS (Hardware), NMS (VLANs/Configs), CMS (ISPs/Carriers).
+              Escalate correctly.
+            </div>
+            <div class="info-card">
+              <i class="fas fa-lightbulb"></i>
+              <strong>Pro Mindset:</strong> Document every resolution. A
+              5S-organized cabinet saves hours. Respect the process, and never
+              stop asking "why."
+            </div>
+            <div
+              class="title-footer"
+              style="margin-top: 15px; text-align: center"
+            >
+              <br />
+              <br />
+              <i class="fas fa-code"></i> Built from actual NCD field experience
+              · SSS Main Office, Quezon City, Philippines <br />
+              <i class="fas fa-network-wired"></i>
+              <strong>Prepared and Developed by:</strong> Pablito Jr. G
+              Yambing<br />
+              <strong>Guided by:</strong> NCD NOSS
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-btn prev-btn" id="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="nav-btn next-btn" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="dots-container" id="dotsContainer"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

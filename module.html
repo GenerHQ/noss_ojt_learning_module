@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SSS NCD | Complete Networking Learning Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0b2b3b 0%, #1a5a6e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .presentation-wrapper {
+            position: relative;
+            max-width: 1300px;
+            width: 100%;
+            height: 85vh;
+            min-height: 600px;
+            background: white;
+            border-radius: 48px;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .slide-counter {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: rgba(11, 43, 59, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 6px 16px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 20;
+            font-family: monospace;
+        }
+
+        .slides-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s;
+            overflow-y: auto;
+            padding: 35px 45px;
+            background: white;
+        }
+
+        .slide.active-slide {
+            opacity: 1;
+            visibility: visible;
+            z-index: 10;
+        }
+
+        .slide::-webkit-scrollbar { width: 6px; }
+        .slide::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .slide::-webkit-scrollbar-thumb { background: #f5b042; border-radius: 10px; }
+
+        .slide-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            border-bottom: 4px solid #f5b042;
+            padding-bottom: 12px;
+        }
+        .slide-header i {
+            font-size: 2rem;
+            color: #f5b042;
+            background: #fef4e0;
+            padding: 10px;
+            border-radius: 18px;
+        }
+        .slide-header h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #0b2b3b;
+        }
+
+        .slide-content { padding: 5px 0; }
+
+        /* Title Slide */
+        .title-slide {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .sss-logo-icon i {
+            font-size: 4.5rem;
+            color: #f5b042;
+            background: #0b2b3b;
+            padding: 22px;
+            border-radius: 70px;
+            margin-bottom: 25px;
+        }
+        .title-slide h1 { font-size: 2.8rem; font-weight: 800; color: #0b2b3b; margin-bottom: 15px; }
+        .title-divider { width: 80px; height: 4px; background: #f5b042; margin: 15px auto; }
+        .title-slide h2 { font-size: 1.3rem; color: #334155; font-weight: 500; }
+        .subtitle { margin-top: 25px; color: #5a6e7a; }
+        .title-footer { margin-top: 40px; color: #f5b042; font-weight: 600; }
+
+        /* Grids & Cards */
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+        .three-column { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .info-card { background: #f8fafc; padding: 22px; border-radius: 28px; text-align: center; }
+        .info-card i { font-size: 2.2rem; color: #f5b042; margin-bottom: 15px; }
+        .info-card h3 { font-size: 1.3rem; margin-bottom: 10px; }
+        
+        .stats-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 20px 0; }
+        .stat-pill { background: #0b2b3b; color: white; padding: 8px 20px; border-radius: 40px; font-weight: 600; }
+        
+        .timeline-item { display: flex; gap: 20px; padding: 12px; border-left: 3px solid #f5b042; margin-bottom: 12px; background: #f1f5f9; border-radius: 16px; }
+        .year { font-weight: 800; font-size: 1.2rem; color: #f5b042; min-width: 70px; }
+
+        .functions-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin: 20px 0; }
+        .func-item { background: #fef4e0; padding: 12px; border-radius: 20px; font-weight: 600; text-align: center; }
+
+        .org-tree { text-align: center; }
+        .org-root { background: #0b2b3b; color: white; padding: 12px 25px; border-radius: 30px; display: inline-block; margin-bottom: 25px; }
+        .org-branches { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .org-node { background: #f5b042; color: #0b2b3b; padding: 10px 18px; border-radius: 25px; font-weight: 700; margin-bottom: 12px; }
+
+        .ops-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 30px; }
+        .ops-icons div { background: linear-gradient(135deg, #0b2b3b, #1a5a6e); color: white; padding: 10px 18px; border-radius: 50px; font-weight: 600; }
+
+        .crimping-table, .component-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .crimping-table th, .component-table th { background: #0b2b3b; color: white; padding: 10px; text-align: left; }
+        .crimping-table td, .component-table td { background: #f8fafc; padding: 10px; border-bottom: 1px solid #e2e8f0; }
+        .wire-color { font-family: monospace; font-weight: bold; }
+
+        .tip { background: #f1f5f9; padding: 14px 18px; border-radius: 18px; border-left: 5px solid #f5b042; margin-bottom: 12px; }
+        .cmd-codes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+        code { background: #1e293b; color: #facc15; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(11,43,59,0.85);
+            backdrop-filter: blur(8px);
+            border: none;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: white;
+            font-size: 1.2rem;
+            z-index: 20;
+            transition: 0.3s;
+        }
+        .nav-btn:hover { background: #f5b042; transform: translateY(-50%) scale(1.05); }
+        .prev-btn { left: 15px; }
+        .next-btn { right: 15px; }
+
+        .dots-container {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+        }
+        .dot { width: 9px; height: 9px; border-radius: 50%; background: #cbd5e1; cursor: pointer; transition: 0.3s; }
+        .dot.active { background: #f5b042; width: 25px; border-radius: 10px; }
+
+        @media (max-width: 900px) {
+            .slide { padding: 25px 20px; }
+            .two-column, .three-column { grid-template-columns: 1fr; }
+            .title-slide h1 { font-size: 1.8rem; }
+            .slide-header h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="presentation-wrapper">
+    <div class="slide-counter"><span id="current-slide">1</span> / <span id="total-slides">20</span></div>
+    <div class="slides-container" id="slides-container">
+        <!-- SLIDE 1 - TITLE -->
+        <div class="slide active-slide" data-slide="1">
+            <div class="slide-content title-slide">
+                <div class="sss-logo-icon"><i class="fas fa-shield-alt"></i></div>
+                <h1>Network & Communications Department</h1>
+                <div class="title-divider"></div>
+                <h2>Social Security System · Philippines</h2>
+                <p class="subtitle">Complete Learning Module · Infrastructure · Operations · Best Practices</p>
+                <div class="title-footer"><i class="fas fa-network-wired"></i> NCD Technical Reference Hub</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 - MISSION, VISION, VALUES -->
+        <div class="slide" data-slide="2">
+            <div class="slide-header"><i class="fas fa-bullseye"></i><h2>Mission, Vision & Core Values</h2></div>
+            <div class="slide-content two-column">
+                <div class="info-card"><i class="fas fa-flag-checkered"></i><h3>Mission</h3><p>Manage a sound social security system promoting social justice, providing protection against disability, sickness, maternity, old age, death, and other contingencies.</p></div>
+                <div class="info-card"><i class="fas fa-eye"></i><h3>Vision</h3><p>A viable institution providing universal and equitable social protection through world-class service.</p><div class="stats-grid" style="margin-top:15px"><span class="stat-pill">Trust</span><span class="stat-pill">Empowerment</span><span class="stat-pill">Teamwork</span></div></div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 - HISTORY & MANDATE -->
+        <div class="slide" data-slide="3">
+            <div class="slide-header"><i class="fas fa-history"></i><h2>History & Mandate</h2></div>
+            <div class="slide-content">
+                <div class="timeline-item"><div class="year">1957</div><div>Founded Sept 1, 1957 under RA 1161 (Social Security Act of 1954)</div></div>
+                <div class="timeline-item"><div class="year">2019</div><div>RA 11199 (Social Security Act of 2018) — expanded powers, unemployment benefits, OFW coverage, Provident Fund</div></div>
+                <div class="stats-grid"><div class="stat-pill"><i class="fas fa-building"></i> 123 Branches</div><div class="stat-pill"><i class="fas fa-store"></i> 84 Satellites</div><div class="stat-pill"><i class="fas fa-globe"></i> 27 Int'l Offices</div><div class="stat-pill"><i class="fas fa-chart-line"></i> 234+ Locations</div></div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4 - NCD OVERVIEW -->
+        <div class="slide" data-slide="4">
+            <div class="slide-header"><i class="fas fa-sitemap"></i><h2>Network & Communications Department</h2></div>
+            <div class="slide-content"><p style="font-size:1.1rem;margin-bottom:20px">Key technical unit under IT Management Group — backbone of SSS nationwide connectivity</p>
+            <div class="functions-grid"><div class="func-item"><i class="fas fa-server"></i> Infrastructure Management</div><div class="func-item"><i class="fas fa-wifi"></i> System Connectivity</div><div class="func-item"><i class="fas fa-headset"></i> Network Ops & Support</div><div class="func-item"><i class="fas fa-shopping-cart"></i> Equipment Procurement</div></div>
+            <div class="info-card"><i class="fas fa-user-tie"></i> Head: ROMAN ESPISO — Department Manager III / Acting Head</div></div>
+        </div>
+
+        <!-- SLIDE 5 - ORGANIZATIONAL STRUCTURE -->
+        <div class="slide" data-slide="5">
+            <div class="slide-header"><i class="fas fa-users"></i><h2>Organizational Structure</h2></div>
+            <div class="slide-content org-tree"><div class="org-root">Roman Espiso<br><span>Dept Manager III</span></div>
+            <div class="org-branches"><div class="org-branch"><div class="org-node">NOSS<br><span>Salvador Condat</span></div><div>Main Office & NCR Team<br>Luzon Visayas Mindanao Team</div></div>
+            <div class="org-branch"><div class="org-node">NMS<br><span>Emylou Cesar</span></div><div>VLAN · IP Management</div></div>
+            <div class="org-branch"><div class="org-node">CMS<br><span>Jestoni Soriano</span></div><div>Carrier & ISP Coordination</div></div></div></div>
+        </div>
+
+        <!-- SLIDE 6 - DAILY OPERATIONS OVERVIEW -->
+        <div class="slide" data-slide="6">
+            <div class="slide-header"><i class="fas fa-tasks"></i><h2>Daily Operations · What to Expect</h2></div>
+            <div class="slide-content"><div class="ops-icons"><div><i class="fas fa-network-wired"></i> LAN/WAN</div><div><i class="fas fa-phone-alt"></i> IP Phones</div><div><i class="fas fa-wifi"></i> Access Points</div><div><i class="fas fa-plug"></i> IOs & Cabling</div><div><i class="fas fa-microchip"></i> Switches</div><div><i class="fas fa-shield-alt"></i> FortiClient</div></div>
+            <div class="info-card"><h3><i class="fas fa-ticket-alt"></i> Ticket Lifecycle</h3><div class="ops-icons" style="background:transparent;gap:8px"><span>Receive → Probe → Diagnose → Resolve → Document</span></div></div></div>
+        </div>
+
+        <!-- SLIDE 7 - NETWORK COMPONENTS & FUNCTIONS (DETAILED) -->
+        <div class="slide" data-slide="7">
+            <div class="slide-header"><i class="fas fa-microchip"></i><h2>Network Components · Functions</h2></div>
+            <div class="slide-content">
+                <table class="component-table">
+                    <tr><th>Component</th><th>Function / Purpose</th><th>Field Notes</th></tr>
+                    <tr><td><i class="fas fa-server"></i> Switch (Alcatel)</td><td>Connects devices within LAN, forwards data using MAC addresses</td><td>Green LED = PC only; Amber LED = PC+IP Phone; ports 1/24 = trunk lines</td></tr>
+                    <tr><td><i class="fas fa-wifi"></i> Access Point</td><td>Extends wireless network coverage</td><td>Daily install/decom at Medical Dept; requires PoE switch</td></tr>
+                    <tr><td><i class="fas fa-plug"></i> Information Outlet (IO)</td><td>Wall jack for terminating horizontal cabling</td><td>Split cabling, replacement, continuity testing with LAN tester</td></tr>
+                    <tr><td><i class="fas fa-exchange-alt"></i> Patch Panel</td><td>Organizes cable termination, simplifies moves/adds/changes</td><td>Labeling is critical; patch cables connect panel to switch</td></tr>
+                    <tr><td><i class="fas fa-phone-volume"></i> IP Phone</td><td>VoIP telephone using network connection</td><td>"No TFTP response" → reconfigure IP, set wired VLAN 32/33/34</td></tr>
+                    <tr><td><i class="fas fa-tachometer-alt"></i> Router/FortiClient</td><td>Connects networks, VPN gateway for WFH</td><td>FortiClient requires IPSEC VPN: wfh.sss.gov.ph</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- SLIDE 8 - CRIMPING STANDARDS: T568A vs T568B -->
+        <div class="slide" data-slide="8">
+            <div class="slide-header"><i class="fas fa-plug"></i><h2>Crimping Standards · T568A vs T568B</h2></div>
+            <div class="slide-content">
+                <table class="crimping-table">
+                    <tr><th>Pin</th><th>T568A Color</th><th>T568B Color</th><th>Pair Function</th></tr>
+                    <tr><td>1</td><td class="wire-color">White/Green</td><td class="wire-color">White/Orange</td><td>Tx+ (Transmit)</td></tr>
+                    <tr><td>2</td><td class="wire-color">Green</td><td class="wire-color">Orange</td><td>Tx- (Transmit)</td></tr>
+                    <tr><td>3</td><td class="wire-color">White/Orange</td><td class="wire-color">White/Green</td><td>Rx+ (Receive)</td></tr>
+                    <tr><td>4</td><td class="wire-color">Blue</td><td class="wire-color">Blue</td><td>Unused / PoE</td></tr>
+                    <tr><td>5</td><td class="wire-color">White/Blue</td><td class="wire-color">White/Blue</td><td>Unused / PoE</td></tr>
+                    <tr><td>6</td><td class="wire-color">Orange</td><td class="wire-color">Green</td><td>Rx- (Receive)</td></tr>
+                    <tr><td>7</td><td class="wire-color">White/Brown</td><td class="wire-color">White/Brown</td><td>Unused / PoE</td></tr>
+                    <tr><td>8</td><td class="wire-color">Brown</td><td class="wire-color">Brown</td><td>Unused / PoE</td></tr>
+                </table>
+                <div class="tip"><i class="fas fa-info-circle"></i> <strong>Purpose & Usage:</strong> T568B is most common in PH (compatible with US standards). T568A is required for US government contracts. Keep both ends the SAME standard for straight-through cable. Mixing A/B creates crossover cable.</div>
+                <div class="tip"><i class="fas fa-tools"></i> <strong>Field Tip:</strong> Always double-check both ends before crimping. Intermittent connection? Recrimp using all 8 pins — we once found a connector with only 4 pins crimped!</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 9 - IP ADDRESSING AT SSS -->
+        <div class="slide" data-slide="9">
+            <div class="slide-header"><i class="fas fa-ip"></i><h2>IP Addressing · SSS Environment</h2></div>
+            <div class="slide-content three-column">
+                <div class="info-card"><strong>10.x.x.x</strong><br>LAN / Private IP (office wired)</div>
+                <div class="info-card"><strong>172.16-31.x.x</strong><br>WiFi / Private IP range</div>
+                <div class="info-card"><strong>127.0.0.1</strong><br>Localhost / Loopback</div>
+                <div class="info-card"><strong>169.254.x.x</strong><br>APIPA (No DHCP, not VLAN)</div>
+                <div class="info-card"><strong>IP Phone VLANs</strong><br>32=Ground, 33=4th-8th, 34=8th+</div>
+                <div class="info-card"><strong>Trunk lines</strong><br>Ports 1 & 24 on Alcatel switches</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 10 - ESSENTIAL COMMANDS -->
+        <div class="slide" data-slide="10">
+            <div class="slide-header"><i class="fas fa-terminal"></i><h2>Essential CMD Commands</h2></div>
+            <div class="slide-content">
+                <div class="cmd-codes"><code>ipconfig</code><code>ipconfig /all</code><code>ipconfig /release</code><code>ipconfig /renew</code></div>
+                <div class="cmd-codes"><code>ping 10.1 -t</code><code>ping 1.1.1.1</code><code>ping wfh.sss.gov.ph</code></div>
+                <div class="cmd-codes"><code>ncpa.cpl</code><code>ping prs:7777/m8</code></div>
+                <div class="tip"><i class="fas fa-lightbulb"></i> <strong>Pro Tip:</strong> Use <code>ipconfig /all</code> to find MAC address (needed for NMS IP assignment). <code>ping -t</code> helps monitor intermittent connection drops.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 11 - PROXY & FORTICLIENT WFH -->
+        <div class="slide" data-slide="11">
+            <div class="slide-header"><i class="fas fa-globe"></i><h2>Proxy & FortiClient (WFH)</h2></div>
+            <div class="slide-content two-column">
+                <div class="info-card"><i class="fas fa-server"></i><h3>Proxy Settings</h3><p>Main: <code>proxyserver828:3128</code><br>Alternate: <code>proxyserver</code> or <code>10.0.151.136-139</code><br><strong>⚠️ First-time AD users MUST configure proxy after LAN connection</strong></p></div>
+                <div class="info-card"><i class="fas fa-home"></i><h3>FortiClient WFH Steps</h3><p>1. Client on separate WiFi/mobile data<br>2. Ping wfh.sss.gov.ph → create IPSEC VPN<br>3. Login → ping prs:7777/m8<br>4. Needs Department Head approval</p></div>
+            </div>
+        </div>
+
+        <!-- SLIDE 12 - SWITCH & VLAN BASICS -->
+        <div class="slide" data-slide="12">
+            <div class="slide-header"><i class="fas fa-exchange-alt"></i><h2>Switch & VLAN Fundamentals</h2></div>
+            <div class="slide-content">
+                <div class="tip"><i class="fas fa-lightbulb"></i> <strong>Port Indicators (Alcatel):</strong> Green = PC only endpoint | Amber = PC + IP Phone (PoE active)</div>
+                <div class="tip"><i class="fas fa-exclamation-triangle"></i> <strong>Trunk lines:</strong> Ports 1 and 24 are often trunk lines — DO NOT connect end devices there.</div>
+                <div class="tip"><i class="fas fa-share"></i> <strong>VLAN Mismatch:</strong> When PC gets IP but can't access resources → escalate to NMS for VLAN reconfiguration immediately.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 13 - TROUBLESHOOTING COMMON ISSUES -->
+        <div class="slide" data-slide="13">
+            <div class="slide-header"><i class="fas fa-bug"></i><h2>Troubleshooting · Common Issues</h2></div>
+            <div class="slide-content">
+                <div class="tip"><strong>No TFTP response (IP Phone):</strong> Reconfigure IP via phone's ipconfig, set wired VLAN (32/33/34)</div>
+                <div class="tip"><strong>Intermittent LAN:</strong> Check RJ45 crimp (all 8 pins), loose connector, or rodent-damaged cable</div>
+                <div class="tip"><strong>IP pingable but no connection:</strong> Disable DNS (ncpa.cpl → IPv4) or check proxy settings</div>
+                <div class="tip"><strong>2 IP addresses:</strong> FortiClient improperly closed → deactivate via useradmin or client account sync</div>
+                <div class="tip"><strong>Printer not connecting:</strong> Check if printer is powered on, IP address reconfigure, or VLAN mismatch</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 14 - TOOLS & TESTERS -->
+        <div class="slide" data-slide="14">
+            <div class="slide-header"><i class="fas fa-tools"></i><h2>Essential Tools & Testers</h2></div>
+            <div class="slide-content three-column">
+                <div class="info-card"><i class="fas fa-cut"></i><h3>Crimping Tool</h3><p>Crimps RJ45 connectors onto UTP cable. Requires proper pressure to pierce wires.</p></div>
+                <div class="info-card"><i class="fas fa-chart-line"></i><h3>LAN Tester</h3><p>Tests continuity, pin mapping, and cable faults. Essential for structured cabling validation.</p></div>
+                <div class="info-card"><i class="fas fa-mobile-alt"></i><h3>MyPCInfo</h3><p>Internal SSS app to get hostname, IP, MAC address quickly without CMD.</p></div>
+                <div class="info-card"><i class="fas fa-eye"></i><h3>Optical Power Meter</h3><p>For fiber optic cable testing (used in inter-building connections).</p></div>
+                <div class="info-card"><i class="fas fa-microchip"></i><h3>Punch Down Tool</h3><p>For terminating cables into patch panels and IOs (110/Krone type).</p></div>
+                <div class="info-card"><i class="fas fa-clipboard"></i><h3>Cable Labeler</h3><p>Labeling every cable saves hours during future troubleshooting.</p></div>
+            </div>
+        </div>
+
+        <!-- SLIDE 15 - CABLE TYPES & USAGE -->
+        <div class="slide" data-slide="15">
+            <div class="slide-header"><i class="fas fa-ethernet"></i><h2>Cable Types · UTP Categories</h2></div>
+            <div class="slide-content">
+                <table class="component-table">
+                    <tr><th>Cable Type</th><th>Speed</th><th>Usage at SSS</th></tr>
+                    <tr><td>Cat5e</td><td>1 Gbps (up to 100m)</td><td>Legacy installations, still functional for basic LAN</td></tr>
+                    <tr><td>Cat6</td><td>10 Gbps (up to 55m)</td><td>Standard for new installations, better crosstalk protection</td></tr>
+                    <tr><td>Patch Cable (stranded)</td><td>Varies</td><td>Flexible, used from IO to PC and patch panel to switch</td></tr>
+                    <tr><td>Solid UTP (bulk spool)</td><td>Varies</td><td>Used for horizontal cabling (walls, ceilings)</td></tr>
+                </table>
+                <div class="tip"><i class="fas fa-info-circle"></i> At SSS NCD, we prepare hundreds of patch cables (1.5m, 2.5m, 3m lengths) using Cat6 bulk spools and RJ45 connectors.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 16 - TIPS & BEST PRACTICES -->
+        <div class="slide" data-slide="16">
+            <div class="slide-header"><i class="fas fa-lightbulb"></i><h2>Tips & Best Practices</h2></div>
+            <div class="slide-content">
+                <div class="tip"><i class="fas fa-question-circle"></i> <strong>Probe first:</strong> Ask about recent changes (station transfer, new PC) before touching hardware</div>
+                <div class="tip"><i class="fas fa-power-off"></i> <strong>Restart matters:</strong> Simple reboot fixes 20% of "no internet" issues</div>
+                <div class="tip"><i class="fas fa-plug"></i> <strong>Loose RJ45:</strong> Recrimp using all 8 pins — intermittent connection solved</div>
+                <div class="tip"><i class="fas fa-mouse"></i> <strong>Rodent damage:</strong> Always check under desks / ceiling trays for cable bites</div>
+                <div class="tip"><i class="fas fa-chart-simple"></i> <strong>VLAN mismatch:</strong> Escalate to NMS immediately — don't waste hours guessing</div>
+                <div class="tip"><i class="fas fa-tasks"></i> <strong>Document everything:</strong> Every resolution builds the knowledge base</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 17 - 5S METHODOLOGY -->
+        <div class="slide" data-slide="17">
+            <div class="slide-header"><i class="fas fa-hand-sparkles"></i><h2>5S Workplace Organization</h2></div>
+            <div class="slide-content three-column">
+                <div class="info-card"><strong>Sort</strong><br>Remove unnecessary items (defective cables, old components)</div>
+                <div class="info-card"><strong>Set in Order</strong><br>Organize tools, label cables, arrange data cabinets logically</div>
+                <div class="info-card"><strong>Shine</strong><br>Clean work areas, dust switches and patch panels</div>
+                <div class="info-card"><strong>Standardize</strong><br>Create consistent labeling and cabling color codes</div>
+                <div class="info-card"><strong>Sustain</strong><br>Regular audits and continuous improvement culture</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 18 - LEARNING RESOURCES -->
+        <div class="slide" data-slide="18">
+            <div class="slide-header"><i class="fas fa-graduation-cap"></i><h2>Learning Resources</h2></div>
+            <div class="slide-content two-column">
+                <div class="info-card"><i class="fab fa-cisco"></i><h3>NETICAD (Cisco)</h3><p>Free interactive networking fundamentals — OSI model, subnetting, VLAN concepts</p></div>
+                <div class="info-card"><i class="fas fa-book"></i><h3>Internal NCD Manuals</h3><p>SRMS documentation, cabling standards, troubleshooting guides</p></div>
+                <div class="info-card"><i class="fas fa-chalkboard"></i><h3>Mentorship</h3><p>Senior CMTs provide hands-on training: cable termination, switch config, ticket handling</p></div>
+                <div class="info-card"><i class="fas fa-database"></i><h3>SRMS System</h3><p>Service Request Management System tracks tickets, SLA, and support analytics</p></div>
+            </div>
+        </div>
+
+        <!-- SLIDE 19 - FOR FUTURE TEAM MEMBERS -->
+        <div class="slide" data-slide="19">
+            <div class="slide-header"><i class="fas fa-compass"></i><h2>For Future Team Members</h2></div>
+            <div class="slide-content">
+                <div class="tip">✓ Carry spare crimped cables + RJ45 connectors in your toolkit</div>
+                <div class="tip">✓ Before touching hardware, check switch port lights and proxy settings first</div>
+                <div class="tip">✓ Master the LAN tester — physical layer issues are the most common (50% of tickets)</div>
+                <div class="tip">✓ Escalate VLAN or IP assignment to NMS quickly — it's faster than guessing</div>
+                <div class="tip">✓ Always double-check port identification when switches are inverted</div>
+                <div class="tip">✓ Document every resolution — future interns will thank you</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 20 - SUMMARY & CLOSING -->
+        <div class="slide" data-slide="20">
+            <div class="slide-header"><i class="fas fa-check-circle"></i><h2>Summary · Key Takeaways</h2></div>
+            <div class="slide-content title-slide" style="justify-content: flex-start;">
+                <div class="info-card" style="margin-bottom:15px"><i class="fas fa-network-wired"></i> NCD maintains 234+ SSS locations nationwide</div>
+                <div class="info-card" style="margin-bottom:15px"><i class="fas fa-tools"></i> T568B standard for crimping; always use all 8 pins</div>
+                <div class="info-card" style="margin-bottom:15px"><i class="fas fa-shield-alt"></i> Proxy + FortiClient = essential for connectivity</div>
+                <div class="info-card" style="margin-bottom:15px"><i class="fas fa-chart-line"></i> Document, escalate wisely, and keep learning</div>
+                <div class="title-footer" style="margin-top:30px"><i class="fas fa-heart"></i> Built from actual NCD field experience</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+    <button class="nav-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    <div class="dots-container" id="dotsContainer"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('dotsContainer');
+        const currentSlideSpan = document.getElementById('current-slide');
+        const totalSlidesSpan = document.getElementById('total-slides');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        totalSlidesSpan.textContent = totalSlides;
+
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === currentIndex) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                if (index === currentIndex) slide.classList.add('active-slide');
+                else slide.classList.remove('active-slide');
+            });
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) dot.classList.add('active');
+                else dot.classList.remove('active');
+            });
+            currentSlideSpan.textContent = currentIndex + 1;
+        }
+
+        function goToSlide(index) {
+            if (index < 0) index = 0;
+            if (index >= totalSlides) index = totalSlides - 1;
+            currentIndex = index;
+            updateSlides();
+        }
+
+        function nextSlide() { if (currentIndex < totalSlides - 1) { currentIndex++; updateSlides(); } }
+        function prevSlide() { if (currentIndex > 0) { currentIndex--; updateSlides(); } }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+        document.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') nextSlide(); else if (e.key === 'ArrowLeft') prevSlide(); });
+
+        let touchStartX = 0;
+        const wrapper = document.querySelector('.presentation-wrapper');
+        wrapper.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; });
+        wrapper.addEventListener('touchend', (e) => {
+            let endX = e.changedTouches[0].screenX;
+            if (endX < touchStartX - 50) nextSlide();
+            if (endX > touchStartX + 50) prevSlide();
+        });
+
+        createDots();
+        updateSlides();
+    });
+</script>
+</body>
+</html>
