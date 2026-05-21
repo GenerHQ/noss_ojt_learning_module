@@ -21,7 +21,7 @@
   <body>
     <div class="presentation-wrapper">
       <div class="slide-counter">
-        <span id="current-slide">1</span> / <span id="total-slides">30</span>
+        <span id="current-slide">1</span> / <span id="total-slides">25</span>
       </div>
 
       <div class="slides-container" id="slides-container">
@@ -32,10 +32,15 @@
               <img
                 src="assets/ncdnoss.gif"
                 alt="ncd_logo"
-                style="border-radius: 50%"
                 width="400px"
+                style="
+                  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                  border-radius: 50%;
+                  overflow: hidden;
+                "
               />
             </div>
+            <br />
             <h1>Network & Communications Department</h1>
             <div class="title-divider"></div>
             <h2>Social Security System · East Avenue · Quezon City</h2>
@@ -46,8 +51,8 @@
           </div>
         </div>
 
-        <!-- SLIDE 1.5 - WELCOME INTERN MESSAGE (插入在标题页之后) -->
-        <div class="slide" data-slide="1-5">
+        <!-- SLIDE 2 - WELCOME INTERN MESSAGE-->
+        <div class="slide" data-slide="2">
           <div class="slide-header">
             <i class="fas fa-hands-helping"></i>
             <h2>Welcome, New Intern! 👋</h2>
@@ -179,8 +184,8 @@
           </div>
         </div>
 
-        <!-- SLIDE 2 - MISSION & VISION -->
-        <div class="slide" data-slide="2">
+        <!-- SLIDE 3 - MISSION & VISION -->
+        <div class="slide" data-slide="3">
           <div class="slide-header">
             <i class="fas fa-bullseye"></i>
             <h2>SSS Mission, Vision & Core Values (Review)</h2>
@@ -190,7 +195,13 @@
               <img
                 src="assets/sssforall.png"
                 alt="sss_logo"
-                style="width: 400px; align-items: end"
+                style="
+                  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                  border-radius: 8px;
+                  overflow: hidden;
+                  width: 400px;
+                  align-items: end;
+                "
               />
             </center>
             <div class="info-card">
@@ -231,8 +242,8 @@
           </div>
         </div>
 
-        <!-- SLIDE 3 - HISTORY & MANDATE -->
-        <div class="slide" data-slide="3">
+        <!-- SLIDE 4 - HISTORY & MANDATE -->
+        <div class="slide" data-slide="4">
           <div class="slide-header">
             <i class="fas fa-history"></i>
             <h2>History & Mandate (Review)</h2>
@@ -281,8 +292,8 @@
           </div>
         </div>
 
-        <!-- SLIDE 4 - NCD DEPARTMENT OVERVIEW -->
-        <div class="slide" data-slide="4">
+        <!-- SLIDE 5 - NCD DEPARTMENT OVERVIEW -->
+        <div class="slide" data-slide="5">
           <div class="slide-header">
             <i class="fas fa-sitemap"></i>
             <h2>Network & Communications Department</h2>
@@ -302,14 +313,7 @@
                   unauthorized access.
                 </div>
               </div>
-              <div class="func-item" onclick="toggleDescription(this)">
-                <i class="fas fa-server"></i>
-                <strong>Server and Data Center Administration</strong>
-                <div class="func-desc hidden">
-                  Oversees physical and virtual servers, ensuring optimal
-                  performance, redundancy, and disaster recovery readiness.
-                </div>
-              </div>
+
               <div class="func-item" onclick="toggleDescription(this)">
                 <i class="fas fa-phone-alt"></i>
                 <strong>Voice and Unified Communications</strong>
@@ -341,14 +345,6 @@
                 <div class="func-desc hidden">
                   Maintains documentation and version control for network
                   configurations, ensuring compliance and traceability.
-                </div>
-              </div>
-              <div class="func-item" onclick="toggleDescription(this)">
-                <i class="fas fa-chart-line"></i>
-                <strong>Capacity Planning and Scalability</strong>
-                <div class="func-desc hidden">
-                  Forecasts future network demands and plans upgrades to support
-                  expanding SSS operations.
                 </div>
               </div>
               <div class="func-item" onclick="toggleDescription(this)">
@@ -386,7 +382,13 @@
               <img
                 src="assets/ncd_head.png"
                 alt="ncd"
-                style="width: 250px; height: 190px"
+                style="
+                  width: 250px;
+                  height: 190px;
+                  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                  border-radius: 50%;
+                  overflow: hidden;
+                "
               />
               <br />
               <br />
@@ -395,8 +397,8 @@
           </div>
         </div>
 
-        <!-- SLIDE 5 - ORGANIZATIONAL STRUCTURE -->
-        <div class="slide" data-slide="5">
+        <!-- SLIDE 6 - ORGANIZATIONAL STRUCTURE -->
+        <div class="slide" data-slide="6">
           <div class="slide-header">
             <i class="fas fa-users"></i>
             <h2>Organizational Structure</h2>
@@ -410,7 +412,7 @@
                 style="border-radius: 50%"
               /><br />
               Roman Espiso<br /><span
-                >Department Manager III / Acting Head</span
+                >NCD Department Manager III / Acting Head</span
               >
             </div>
             <div class="org-branches">
@@ -424,9 +426,9 @@
                   /><br />
                   NOSS<br /><span>Salvador Condat</span>
                 </div>
-                <div>Network Operations & Support</div>
-                <div style="font-size: 0.8rem">
-                  Network Hardware Installation/Troubleshooting
+                <div>
+                  Network Operations & Support<br />
+                  Section <strong>(NOSS)</strong>
                 </div>
               </div>
               <div class="org-branch">
@@ -438,9 +440,8 @@
                     style="border-radius: 50%"
                   /><br />NMS<br /><span>Emylou Cesar</span>
                 </div>
-                <div>Network Management</div>
-                <div style="font-size: 0.8rem">
-                  VLAN · IP Addressing · Switch Configuration
+                <div>
+                  Network Management<br />Section <strong>(NMS)</strong>
                 </div>
               </div>
               <div class="org-branch">
@@ -453,17 +454,16 @@
                   /><br />
                   CMS<br /><span>Jestoni Soriano</span>
                 </div>
-                <div>Carrier Management</div>
-                <div style="font-size: 0.8rem">
-                  ISP Coordination · Direct Lines · Billing Management
+                <div>
+                  Carrier Management Section<br /><strong>(CMS)</strong>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 6 - DAILY OPERATIONS -->
-        <div class="slide" data-slide="6">
+        <!-- SLIDE 7 - DAILY OPERATIONS -->
+        <div class="slide" data-slide="7">
           <div class="slide-header">
             <i class="fas fa-tasks"></i>
             <h2>Daily Operations · What to Expect</h2>
@@ -477,7 +477,7 @@
               <div><i class="fas fa-plug"></i> IO (Information Outlet)</div>
               <div><i class="fas fa-exchange-alt"></i> Patch Cable</div>
               <div><i class="fas fa-cut"></i> Crimping / Recrimping</div>
-              <div><i class="fas fa-plug"></i> RJ45 / RJ11</div>
+              <div><i class="fas fa-plug"></i> RJ45 / RJ11 Connector</div>
               <div><i class="fas fa-server"></i> Data Cabinet</div>
               <div><i class="fas fa-ticket-alt"></i> Ticket</div>
               <div><i class="fas fa-wifi-slash"></i> "No internet"</div>
@@ -501,22 +501,28 @@
                 <span>Document</span> <i class="fas fa-arrow-right"></i>
                 <span>Close</span>
               </div>
-              <img
-                src="assets/itsm_lifecycle.png"
-                alt="itsm_lifecycle"
-                width="350px"
-                style="border-radius: 50%"
-              />
-              <img src="assets/itsm.JPG" alt="itsms"
-                width="550px"
-                
-              />
+              <br />
+              <div
+                style="
+                  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                  border-radius: 8px;
+                  overflow: hidden;
+                "
+              >
+                <img
+                  src="assets/itsm_lifecycle.png"
+                  alt="itsm_lifecycle"
+                  width="350px"
+                  style="border-radius: 50%"
+                />
+                <img src="assets/itsm.JPG" alt="itsms" width="800px" />
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 7 - COMPLETE NETWORK TERMINOLOGY & COMPONENTS -->
-        <div class="slide" data-slide="7">
+        <!-- SLIDE 8 - COMPLETE NETWORK TERMINOLOGY & COMPONENTS -->
+        <div class="slide" data-slide="8">
           <div class="slide-header">
             <i class="fas fa-microchip"></i>
             <h2>Complete Network Terminology · Components & Daily Tools</h2>
@@ -553,10 +559,11 @@
                       traditional phone lines for voice communication.
                     </td>
                     <td>
-                      Common errors: <strong>"No TFTP response"</strong> →
+                      Common errors:
+                      <strong>"No TFTP response"</strong> on display →
                       reconfigure IP via phone's ipconfig menu.
-                      <strong>"No Ethernet link"</strong> → check cable
-                      connection or port switching.
+                      <strong>"No Ethernet link"</strong> on display → check
+                      cable connection or try port switching.
                     </td>
                   </tr>
                   <tr>
@@ -567,16 +574,16 @@
                     </td>
                     <td>
                       Daily AP install and decommission. Requires PoE (Power
-                      over Ethernet) from switch. Troubleshoot with
-                      <strong>ping</strong> to verify connectivity.
+                      over Ethernet) from switch.
                     </td>
                   </tr>
                   <tr>
-                    <td><i class="fas fa-microchip"></i> Switch</td>
+                    <td><i class="fas fa-microchip"></i> Network Switch</td>
                     <td>
-                      Central device connecting multiple devices within a LAN.
-                      Forwards data using MAC addresses and manages network
-                      traffic.
+                      A hardware component responsible for relaying data from
+                      networks to the destination endpoint through packet
+                      switching, MAC address identification, and a multiport
+                      bridge system
                     </td>
                     <td>
                       <strong>Port switching</strong> is common when relocating
@@ -606,7 +613,9 @@
                     </td>
                     <td>
                       Prepared in various lengths (1.5m, 2.5m, 3m). Damaged
-                      patch cables cause "No Ethernet link" issues → replace via
+                      patch cables cause intermittent disconnections or no
+                      internet (PC/Laptop) or "No Ethernet link" issues (IP
+                      Phone) → replace via
                       <strong>recabling</strong>.
                     </td>
                   </tr>
@@ -632,8 +641,8 @@
                     </td>
                     <td>
                       RJ45 used for LAN, IP Phone, Access Points. RJ11 used for
-                      direct telephone lines. Loose RJ45 causes "No Ethernet
-                      link". Replace via <strong>recrimping</strong>.
+                      direct telephone lines. Loose RJ45 causes no network
+                      connection. Replace via <strong>recrimping</strong>.
                     </td>
                   </tr>
                   <tr>
@@ -686,8 +695,8 @@
                   <tr>
                     <td><i class="fas fa-ethernet"></i> "No Ethernet link"</td>
                     <td>
-                      Physical layer issue: No signal detected between device
-                      and switch. Link light is off.
+                      Physical layer issue of IP Phone: No signal detected
+                      between device and switch. Link light is off.
                     </td>
                     <td>
                       Fix: Check patch cable, try <strong>recabling</strong>,
@@ -724,7 +733,7 @@
                       = external connectivity.<br /><code
                         >ping wfh.sss.gov.ph</code
                       >
-                      = VPN endpoint test.
+                      = VPN gateway test.
                     </td>
                   </tr>
                   <tr>
@@ -763,7 +772,7 @@
                       moves.
                     </td>
                     <td>
-                      Common fix for "No Ethernet link" or dead ports. When
+                      Common fix for no network connection or dead ports. When
                       relocating a workstation, the corresponding switch port
                       must also be switched. Document port changes.
                     </td>
@@ -1092,8 +1101,8 @@
                 src="assets/officewifi.png"
                 alt="office_wifi"
                 style="width: 300px; height: 175px"
-              /><br /><strong>172.x.x.x</strong><br />WiFi / Private IP range<br />(wireless
-              clients)
+              /><br /><strong>172.x.x.x / 192.x.x.x</strong><br />WiFi / Private
+              IP range<br />(wireless clients)
             </div>
             <div class="info-card">
               <img
@@ -1133,6 +1142,11 @@
                     src="assets/mainoffice_network_diagram.png"
                     alt="main_office"
                     width="1250px"
+                    style="
+                      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                      border-radius: 8px;
+                      overflow: hidden;
+                    "
                   />
                 </div>
               </div>
@@ -1147,6 +1161,11 @@
                     src="assets/branch_network_diagram.png"
                     alt="main_office"
                     width="1250px"
+                    style="
+                      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                      border-radius: 8px;
+                      overflow: hidden;
+                    "
                   />
                 </div>
               </div>
@@ -1161,6 +1180,11 @@
                     src="assets/sss_network_diagram.png"
                     alt="main_office"
                     width="1250px"
+                    style="
+                      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                      border-radius: 8px;
+                      overflow: hidden;
+                    "
                   />
                 </div>
               </div>
@@ -1172,8 +1196,8 @@
             </div>
           </div>
         </div>
-        <!-- SLIDE 11 - ESSENTIAL COMMANDS -->
-        <div class="slide" data-slide="11">
+        <!-- SLIDE 12 - ESSENTIAL COMMANDS -->
+        <div class="slide" data-slide="12">
           <div class="slide-header">
             <i class="fas fa-code"></i>
             <h2>Essential Network Commands</h2>
@@ -1265,28 +1289,58 @@
             </div>
           </div>
         </div>
-        <!-- SLIDE 12 - PROXY CONFIGURATION -->
-        <div class="slide" data-slide="12">
+        <!-- SLIDE 13 - PROXY CONFIGURATION -->
+        <div class="slide" data-slide="13">
           <div class="slide-header">
             <i class="fas fa-globe"></i>
             <h2>Proxy Configuration</h2>
           </div>
           <div
             class="slide-content"
-            style="padding-left: 30px; padding-right: 30px"
+            style="padding-left: 20px; padding-right: 20px"
           >
-            <div class="diagram-card">
-              <center>
-                <img
-                  src="assets/proxysetting.png"
-                  alt="proxysetting"
-                  width="1000px"
-                />
-              </center>
+            <div
+              class="diagram-card"
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: flex-start;
+              "
+            >
+              <div style="flex: 1; min-width: 250px">
+                <center>
+                  <img
+                    src="assets/proxysetting.png"
+                    alt="proxysetting"
+                    width="500px"
+                    style="
+                      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                      border-radius: 8px;
+                      overflow: hidden;
+                    "
+                  />
+                </center>
+              </div>
 
-              <br />
-              <div class="proxy-box" style="font-size: 16px">
+              <div
+                class="proxy-box"
+                style="flex: 1; min-width: 250px; font-size: 16px"
+              >
                 <h3><i class="fas fa-server"></i> SSS Proxy Addresses</h3>
+                <p><strong>For Windows</strong></p>
+                <p>
+                  1. Open the Settings menu by pressing
+                  <strong>Windows + I.</strong>
+                </p>
+                <p>2. Click on <strong>Network & internet</strong>.</p>
+                <p>3. Click on <strong>Proxy</strong></p>
+                <p>
+                  4. Click on Proxy settings and choose
+                  <strong>Manual Proxy Setup</strong>
+                </p>
+
+                <br />
                 <p>
                   <strong>Address:Port: </strong><br />
                   <code>proxyserver828:3128</code> (Main Office - default)
@@ -1308,19 +1362,23 @@
                   intranet sites won't load!
                 </div>
               </div>
-              <div class="tip">
-                <i class="fas fa-question-circle"></i>
-                <strong>Proxy Troubleshooting:</strong> If internet works but
-                intranet sites fail, try switching to alternate proxy address.
-                If proxy is not activated on LAN connection, the user will have
-                no network access at all.
-              </div>
+            </div>
+            <!-- closes diagram-card -->
+            <br />
+            <div class="tip">
+              <i class="fas fa-question-circle"></i>
+              <strong>Proxy Troubleshooting:</strong> If internet works but
+              intranet sites fail, try switching to alternate proxy address. If
+              proxy is not activated on LAN connection, the user will have no
+              network access at all.
             </div>
           </div>
+          <!-- closes slide-content -->
         </div>
+        <!-- closes slide -->
 
-        <!-- SLIDE 13 - FORTICLIENT WFH SETUP -->
-        <div class="slide" data-slide="13">
+        <!-- SLIDE 14 - FORTICLIENT WFH SETUP -->
+        <div class="slide" data-slide="14">
           <div class="slide-header">
             <i class="fas fa-home"></i>
             <h2>FortiClient · Work From Home Setup</h2>
@@ -1329,43 +1387,65 @@
             class="slide-content"
             style="padding-left: 30px; padding-right: 30px"
           >
-            <div class="wfh-box" two-column center>
-              <h3>
-                <i class="fas fa-network-wired"></i> Step-by-Step WFH Process
-              </h3>
-              <br />
-              <img
-                src="assets/forticlient.png"
-                alt="forticlient"
-                width="500px"
-              />
-              <ol>
-                <li>
-                  Client must be on separate WiFi/mobile data (NOT connected to
-                  corporate network)
-                </li>
-                <li>
-                  Run <code>ipconfig /all</code> to verify network adapter
-                  status
-                </li>
-                <li>
-                  Ping <code>wfh.sss.gov.ph</code>
-                  connection
-                </li>
-                <li>Then create new IPSEC VPN connection</li>
-                <li>
-                  For service offices: use <code>svc.sss.gov.ph</code> as
-                  gateway
-                </li>
-                <li>
-                  Login with AD credentials → then ping
-                  <code>prs:7777/m8</code> to verify
-                </li>
-                <li>
-                  Activation requires Department Head approval before scheduling
-                </li>
-              </ol>
+            <div
+              class="wfh-box"
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: flex-start;
+              "
+            >
+              <div style="flex: 1; min-width: 250px; font-size: 16px">
+                <h3>
+                  <i class="fas fa-network-wired"></i> Step-by-Step WFH Process
+                </h3>
+                <br />
+
+                <ol>
+                  <li>
+                    Client must be on separate WiFi/mobile data (NOT connected
+                    to corporate network)
+                  </li>
+                  <li>
+                    Run <code>ipconfig /all</code> to verify network adapter
+                    status
+                  </li>
+                  <li>
+                    Ping <code>wfh.sss.gov.ph</code>
+                    connection
+                  </li>
+                  <li>Then create new IPSEC VPN connection</li>
+                  <li>
+                    For service offices: use <code>svc.sss.gov.ph</code> as
+                    gateway
+                  </li>
+                  <li>
+                    Login with AD credentials → then ping
+                    <code>prs:7777/m8</code> to verify
+                  </li>
+                  <li>
+                    Activation requires Department Head approval before
+                    scheduling
+                  </li>
+                </ol>
+              </div>
+              <div style="flex: 1; min-width: 250px">
+                <center>
+                  <img
+                    src="assets/forticlient.png"
+                    alt="forticlient"
+                    width="500px"
+                    style="
+                      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                      border-radius: 8px;
+                      overflow: hidden;
+                    "
+                  />
+                </center>
+              </div>
             </div>
+
             <div class="tip">
               <i class="fas fa-clock"></i> <strong>Note:</strong> When a
               FortiClient activation is scheduled, it will automatically
@@ -1375,8 +1455,8 @@
           </div>
         </div>
 
-        <!-- SLIDE 14 - SWITCH & VLAN BASICS -->
-        <div class="slide" data-slide="14">
+        <!-- SLIDE 15 - SWITCH & VLAN BASICS -->
+        <div class="slide" data-slide="15">
           <div class="slide-header">
             <i class="fas fa-exchange-alt"></i>
             <h2>Switch & VLAN Fundamentals</h2>
@@ -1388,11 +1468,12 @@
             <div class="led-guide">
               <div>
                 <span class="led green"></span> <strong>Green LED</strong> =
-                Endpoint has PC only
+                Endpoint has PC only and
               </div>
               <div>
                 <span class="led amber"></span> <strong>Amber LED</strong> =
                 Endpoint has both PC + IP Phone (PoE active)
+                <strong><i> for Alcatel Switch </i></strong>
               </div>
             </div>
             <div class="tip">
@@ -1631,7 +1712,18 @@
             <h2>5S Workplace Organization Methodology</h2>
           </div>
           <div class="slide-content three-column"></div>
-          <center><img src="assets/5s.png" alt="5s" width="850px" /></center>
+          <center>
+            <img
+              src="assets/5s.png"
+              alt="5s"
+              width="850px"
+              style="
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+                overflow: hidden;
+              "
+            />
+          </center>
         </div>
 
         <!-- SLIDE 20 - DIRECT LINE & TELEPHONY -->
@@ -1876,8 +1968,8 @@
           </div>
         </div>
 
-        <!-- SLIDE 29 - FOR FUTURE STUDENT-INTERNS/ -->
-        <div class="slide" data-slide="29">
+        <!-- SLIDE 24 - FOR FUTURE STUDENT-INTERNS/ -->
+        <div class="slide" data-slide="24">
           <div class="slide-header">
             <i class="fas fa-compass"></i>
             <h2>For Future Student Interns</h2>
@@ -1923,9 +2015,8 @@
           </div>
         </div>
 
-        <!-- SLIDE 30 - SUMMARY & KEY TAKEAWAYS -->
-        <!-- SLIDE 30 - SUMMARY & KEY TAKEAWAYS (REVISED) -->
-        <div class="slide" data-slide="30">
+        <!-- SLIDE 25 - SUMMARY & KEY TAKEAWAYS (REVISED) -->
+        <div class="slide" data-slide="25">
           <div class="slide-header">
             <i class="fas fa-check-circle"></i>
             <h2>Summary · Key Takeaways</h2>
