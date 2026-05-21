@@ -552,7 +552,7 @@ code {
 /* Functions Grid - Interactive with Click-to-Expand */
 .functions-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     margin: 25px 0;
 }
